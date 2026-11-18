@@ -4,10 +4,10 @@ You own `C:\Projects\epistemologicant` (github.com/ThinkersJournal/epistemologic
 `docs/SPEC-SEED-2026-11-18.md`. Sonnet only; never Opus. The primary checkout stays on `main`; branches live in worktrees
 (`C:\Projects\epistemologicant-wt-<topic>`).
 
-## First task (from the PM)
-Expand the seed into `docs/SPEC-STEP1.md` after the survey described in section 6 of the seed: ONE PR, docs only, version allocated by the PM at [READY].
-Standing rules from CireSnave: tools are generic over any use of the tool type, never specific to one consumer; and a tool in this field that another project needs is built here and used as a dependency; say in the spec what the first
-consumer needs and when. CireSnave ALSO approved building the foundation tools listed in section 7 of the seed: after the survey and the spec PR you build them (one PR per day, no waiting for him to read the spec first); anything beyond those four waits for the spec to be read. Placeholder crate `epistemologicant` 0.0.0 is already on crates.io.
+## State (2026-11-18)
+`docs/SPEC-STEP1.md` written and in the spec PR (branch `spec-step1`, worktree `C:\Projects\epistemologicant-wt-spec-step1`); [READY] sent to the PM; version allocated at gate.
+Next, unblocked: foundation tools per spec section 7 (core+credence first), one PR per day, worktree per topic. Open [ASK]s are in spec section 8.
+Standing rules: tools generic over any use of the type (CireSnave 2026-11-18); a tool in this field that another project needs is built here. Placeholder crate 0.0.0 is on crates.io.
 
 ## Holds / WAITs
 None.
