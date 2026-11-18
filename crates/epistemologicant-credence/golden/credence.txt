@@ -1,0 +1,166 @@
+or 0 0 point:0000000000000000
+conflict Hull 0 0 point:0000000000000000
+conflict Mean 0 0 point:0000000000000000
+or 0 0.1 interval:3fb9999999999998:3fc851eb851eb850
+conflict Hull 0 0.1 interval:0000000000000000:3fb999999999999a
+conflict Mean 0 0.1 point:3fa999999999999a
+or 0 0.2 interval:3fc9999999999998:3fd70a3d70a3d708
+conflict Hull 0 0.2 interval:0000000000000000:3fc999999999999a
+conflict Mean 0 0.2 point:3fb999999999999a
+or 0 0.3 interval:3fd3333333333334:3fe051eb851eb852
+conflict Hull 0 0.3 interval:0000000000000000:3fd3333333333333
+conflict Mean 0 0.3 point:3fc3333333333333
+or 0 0.37 interval:3fd7ae147ae147ae:3fe34c985f06f694
+conflict Hull 0 0.37 interval:0000000000000000:3fd7ae147ae147ae
+conflict Mean 0 0.37 point:3fc7ae147ae147ae
+or 0 0.5 interval:3fe0000000000000:3fe8000000000000
+conflict Hull 0 0.5 interval:0000000000000000:3fe0000000000000
+conflict Mean 0 0.5 point:3fd0000000000000
+or 0 0.61 interval:3fe3851eb851eb85:3feb21ff2e48e8a7
+conflict Hull 0 0.61 interval:0000000000000000:3fe3851eb851eb85
+conflict Mean 0 0.61 point:3fd3851eb851eb85
+or 0 0.9 interval:3feccccccccccccd:3fefae147ae147ae
+conflict Hull 0 0.9 interval:0000000000000000:3feccccccccccccd
+conflict Mean 0 0.9 point:3fdccccccccccccd
+or 0 0.999 interval:3feff7ced916872b:3feffffde7210be9
+conflict Hull 0 0.999 interval:0000000000000000:3feff7ced916872b
+conflict Mean 0 0.999 point:3fdff7ced916872b
+or 0 1 point:3ff0000000000000
+conflict Hull 0 1 interval:0000000000000000:3ff0000000000000
+conflict Mean 0 1 point:3fe0000000000000
+or 0.1 0.1 point:3fd15810624dd2f0
+conflict Hull 0.1 0.1 point:3fb999999999999a
+conflict Mean 0.1 0.1 point:3fb999999999999a
+or 0.1 0.2 interval:3fd6872b020c49b8:3fdb22d0e5604188
+conflict Hull 0.1 0.2 interval:3fb999999999999a:3fc999999999999a
+conflict Mean 0.1 0.2 point:3fc3333333333334
+or 0.1 0.3 interval:3fdbb645a1cac082:3fe1e353f7ced917
+conflict Hull 0.1 0.3 interval:3fb999999999999a:3fd3333333333333
+conflict Mean 0.1 0.3 point:3fc999999999999a
+or 0.1 0.37 interval:3fdf573eab367a0e:3fe491bc55864452
+conflict Hull 0.1 0.37 interval:3fb999999999999a:3fd7ae147ae147ae
+conflict Mean 0.1 0.37 point:3fce147ae147ae14
+or 0.1 0.5 interval:3fe30a3d70a3d70a:3fe8cccccccccccd
+conflict Hull 0.1 0.5 interval:3fb999999999999a:3fe0000000000000
+conflict Mean 0.1 0.5 point:3fd3333333333333
+or 0.1 0.61 interval:3fe5e425aee631f8:3feb9e98dcdb37ca
+conflict Hull 0.1 0.61 interval:3fb999999999999a:3fe3851eb851eb85
+conflict Mean 0.1 0.61 point:3fd6b851eb851eb8
+or 0.1 0.9 interval:3fed6872b020c49c:3fefb645a1cac083
+conflict Hull 0.1 0.9 interval:3fb999999999999a:3feccccccccccccd
+conflict Mean 0.1 0.9 point:3fe0000000000000
+or 0.1 0.999 interval:3feff95d4e8fb00c:3feffffe1cd0f11f
+conflict Hull 0.1 0.999 interval:3fb999999999999a:3feff7ced916872b
+conflict Mean 0.1 0.999 point:3fe195810624dd2f
+or 0.1 1 point:3ff0000000000000
+conflict Hull 0.1 1 interval:3fb999999999999a:3ff0000000000000
+conflict Mean 0.1 1 point:3fe199999999999a
+or 0.2 0.2 point:3fdf3b645a1cac06
+conflict Hull 0.2 0.2 point:3fc999999999999a
+conflict Mean 0.2 0.2 point:3fc999999999999a
+or 0.2 0.3 interval:3fe1a9fbe76c8b44:3fe374bc6a7ef9dc
+conflict Hull 0.2 0.3 interval:3fc999999999999a:3fd3333333333333
+conflict Mean 0.2 0.3 point:3fd0000000000000
+or 0.2 0.37 interval:3fe318fc504816f0:3fe5d6e04c059210
+conflict Hull 0.2 0.37 interval:3fc999999999999a:3fd7ae147ae147ae
+conflict Mean 0.2 0.37 point:3fd23d70a3d70a3e
+or 0.2 0.5 interval:3fe5c28f5c28f5c2:3fe999999999999a
+conflict Hull 0.2 0.5 interval:3fc999999999999a:3fe0000000000000
+conflict Mean 0.2 0.5 point:3fd6666666666666
+or 0.2 0.61 interval:3fe80346dc5d6388:3fec1b328b6d86ec
+conflict Hull 0.2 0.61 interval:3fc999999999999a:3fe3851eb851eb85
+conflict Mean 0.2 0.61 point:3fd9eb851eb851ec
+or 0.2 0.9 interval:3fedf3b645a1cac1:3fefbe76c8b43958
+conflict Hull 0.2 0.9 interval:3fc999999999999a:3feccccccccccccd
+conflict Mean 0.2 0.9 point:3fe199999999999a
+or 0.2 0.999 interval:3feffac1d29dc726:3feffffe5280d654
+conflict Hull 0.2 0.999 interval:3fc999999999999a:3feff7ced916872b
+conflict Mean 0.2 0.999 point:3fe32f1a9fbe76c9
+or 0.2 1 point:3ff0000000000000
+conflict Hull 0.2 1 interval:3fc999999999999a:3ff0000000000000
+conflict Mean 0.2 1 point:3fe3333333333333
+or 0.3 0.3 point:3fe50624dd2f1aa0
+conflict Hull 0.3 0.3 point:3fd3333333333333
+conflict Mean 0.3 0.3 point:3fd3333333333333
+or 0.3 0.37 interval:3fe61f212d773190:3fe71c044284dfce
+conflict Hull 0.3 0.37 interval:3fd3333333333333:3fd7ae147ae147ae
+conflict Mean 0.3 0.37 point:3fd570a3d70a3d70
+or 0.3 0.5 interval:3fe828f5c28f5c29:3fea666666666666
+conflict Hull 0.3 0.5 interval:3fd3333333333333:3fe0000000000000
+conflict Mean 0.3 0.5 point:3fd999999999999a
+or 0.3 0.61 interval:3fe9e28240b78035:3fec97cc39ffd60f
+conflict Hull 0.3 0.61 interval:3fd3333333333333:3fe3851eb851eb85
+conflict Mean 0.3 0.61 point:3fdd1eb851eb851e
+or 0.3 0.9 interval:3fee6e978d4fdf3c:3fefc6a7ef9db22d
+conflict Hull 0.3 0.9 interval:3fd3333333333333:3feccccccccccccd
+conflict Mean 0.3 0.9 point:3fe3333333333333
+or 0.3 0.999 interval:3feffbfc6540cc79:3feffffe8830bb8a
+conflict Hull 0.3 0.999 interval:3fd3333333333333:3feff7ced916872b
+conflict Mean 0.3 0.999 point:3fe4c8b439581062
+or 0.3 1 point:3ff0000000000000
+conflict Hull 0.3 1 interval:3fd3333333333333:3ff0000000000000
+conflict Mean 0.3 1 point:3fe4cccccccccccd
+or 0.37 0.37 point:3fe7ff9d6f112fd3
+conflict Hull 0.37 0.37 point:3fd7ae147ae147ae
+conflict Mean 0.37 0.37 point:3fd7ae147ae147ae
+or 0.37 0.5 interval:3fe9a64c2f837b4a:3feaf5c28f5c28f6
+conflict Hull 0.37 0.5 interval:3fd7ae147ae147ae:3fe0000000000000
+conflict Mean 0.37 0.5 point:3fdbd70a3d70a3d7
+or 0.37 0.61 interval:3feb0bf3bea91d9b:3fecef049a9973da
+conflict Hull 0.37 0.61 interval:3fd7ae147ae147ae:3fe3851eb851eb85
+conflict Mean 0.37 0.61 point:3fdf5c28f5c28f5c
+or 0.37 0.9 interval:3feebadc0980b242:3fefcc63f141205c
+conflict Hull 0.37 0.9 interval:3fd7ae147ae147ae:3feccccccccccccd
+conflict Mean 0.37 0.9 point:3fe451eb851eb852
+or 0.37 0.999 interval:3feffcbfa3ef5df1:3feffffeadc57596
+conflict Hull 0.37 0.999 interval:3fd7ae147ae147ae:3feff7ced916872b
+conflict Mean 0.37 0.999 point:3fe5e76c8b439581
+or 0.37 1 point:3ff0000000000000
+conflict Hull 0.37 1 interval:3fd7ae147ae147ae:3ff0000000000000
+conflict Mean 0.37 1 point:3fe5eb851eb851ec
+or 0.5 0.5 point:3fec000000000000
+conflict Hull 0.5 0.5 point:3fe0000000000000
+conflict Mean 0.5 0.5 point:3fe0000000000000
+or 0.5 0.61 interval:3fece147ae147ae1:3fed90ff97247454
+conflict Hull 0.5 0.61 interval:3fe0000000000000:3fe3851eb851eb85
+conflict Mean 0.5 0.61 point:3fe1c28f5c28f5c2
+or 0.5 0.9 interval:3fef333333333333:3fefd70a3d70a3d7
+conflict Hull 0.5 0.9 interval:3fe0000000000000:3feccccccccccccd
+conflict Mean 0.5 0.9 point:3fe6666666666666
+or 0.5 0.999 interval:3feffdf3b645a1cb:3feffffef39085f5
+conflict Hull 0.5 0.999 interval:3fe0000000000000:3feff7ced916872b
+conflict Mean 0.5 0.999 point:3fe7fbe76c8b4396
+or 0.5 1 point:3ff0000000000000
+conflict Hull 0.5 1 interval:3fe0000000000000:3ff0000000000000
+conflict Mean 0.5 1 point:3fe8000000000000
+or 0.61 0.61 point:3fee1a0f0a5efe93
+conflict Hull 0.61 0.61 point:3fe3851eb851eb85
+conflict Mean 0.61 0.61 point:3fe3851eb851eb85
+or 0.61 0.9 interval:3fef8366516db0de:3fefe00d1b71758e
+conflict Hull 0.61 0.9 interval:3fe3851eb851eb85:3feccccccccccccd
+conflict Mean 0.61 0.9 point:3fe828f5c28f5c29
+or 0.61 0.999 interval:3feffec105ef2d4a:3fefffff2e9ecee3
+conflict Hull 0.61 0.999 interval:3fe3851eb851eb85:3feff7ced916872b
+conflict Mean 0.61 0.999 point:3fe9be76c8b43958
+or 0.61 1 point:3ff0000000000000
+conflict Hull 0.61 1 interval:3fe3851eb851eb85:3ff0000000000000
+conflict Mean 0.61 1 point:3fe9c28f5c28f5c2
+or 0.9 0.9 point:3feff7ced916872b
+conflict Hull 0.9 0.9 point:3feccccccccccccd
+conflict Mean 0.9 0.9 point:3feccccccccccccd
+or 0.9 0.999 interval:3fefffeb074a771d:3fefffffca501acb
+conflict Hull 0.9 0.999 interval:3feccccccccccccd:3feff7ced916872b
+conflict Mean 0.9 0.999 point:3fee624dd2f1a9fc
+or 0.9 1 point:3ff0000000000000
+conflict Hull 0.9 1 interval:3feccccccccccccd:3ff0000000000000
+conflict Mean 0.9 1 point:3fee666666666666
+or 0.999 0.999 point:3fefffffff768fa1
+conflict Hull 0.999 0.999 point:3feff7ced916872b
+conflict Mean 0.999 0.999 point:3feff7ced916872b
+or 0.999 1 point:3ff0000000000000
+conflict Hull 0.999 1 interval:3feff7ced916872b:3ff0000000000000
+conflict Mean 0.999 1 point:3feffbe76c8b4396
+or 1 1 point:3ff0000000000000
+conflict Hull 1 1 point:3ff0000000000000
+conflict Mean 1 1 point:3ff0000000000000
+brier 3fd6d773845c1ab4

@@ -1,0 +1,11 @@
+[package]
+name = "epistemologicant-credence"
+description = "Uncertainty values with an honest Unknown, combination rules and scoring rules"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+epistemologicant-core = { version = "0.0.1", path = "../epistemologicant-core" }
