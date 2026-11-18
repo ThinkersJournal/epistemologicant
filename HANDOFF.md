@@ -1,13 +1,15 @@
-# HANDOFF: epistemologicant (soft-slept lane created 2026-11-18)
+# HANDOFF: epistemologicant (updated 2026-11-18)
 
-You own `C:\Projects\epistemologicant` (github.com/ThinkersJournal/epistemologicant, public). Read `C:\Projects\CLAUDE.md`, then `docs/IDEAS-AND-DECISIONS-2026-11-18.md` and
-`docs/SPEC-SEED-2026-11-18.md`. Sonnet only; never Opus. The primary checkout stays on `main`; branches live in worktrees
-(`C:\Projects\epistemologicant-wt-<topic>`).
+Lane for `C:\Projects\epistemologicant`. Read `C:\Projects\CLAUDE.md`, then `docs/SPEC-STEP1.md`. Sonnet only. Primary stays on `main`; work in worktrees (`..\epistemologicant-wt-<topic>`).
 
-## State (2026-11-18)
-`docs/SPEC-STEP1.md` written and in the spec PR (branch `spec-step1`, worktree `C:\Projects\epistemologicant-wt-spec-step1`); [READY] sent to the PM; version allocated at gate.
-Next, unblocked: foundation tools per spec section 7 (core+credence first), one PR per day, worktree per topic. Open [ASK]s are in spec section 8.
-Standing rules: tools generic over any use of the type (CireSnave 2026-11-18); a tool in this field that another project needs is built here. Placeholder crate 0.0.0 is on crates.io.
+## State
+Spec PR #1 merged (d5807e4). PM rulings (2026-11-18): `Reason`/`Verdict`/`Provenance` live in `semanticant-core` (crates.io once published, after 11-19);
+until then a crate-private shim in `-core`. `f64`, no exp/ln in combination rules (`log_score` flagged), golden-output test BYTE-IDENTICAL on ubuntu/windows/macos CI.
+Fifth tool: not now.
+
+## Next (unblocked)
+One PR per day, red-first tests plus sabotage: core+credence 11-19 (worktree `epistemologicant-wt-core-credence`, branch `core-credence`), evidence 11-20, justify 11-21, record 11-22.
+SageAnt needs `-evidence` + `-record` by ~11-22; its design note (general capabilities) comes via the PM ~11-20. CI + branch protection before the first code PR.
 
 ## Holds / WAITs
 None.
