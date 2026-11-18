@@ -4,14 +4,14 @@ version = 4
 
 [[package]]
 name = "epistemologicant-core"
-version = "0.0.0"
+version = "0.0.1"
 dependencies = [
  "semanticant-core",
 ]
 
 [[package]]
 name = "epistemologicant-credence"
-version = "0.0.0"
+version = "0.0.1"
 dependencies = [
  "epistemologicant-core",
 ]

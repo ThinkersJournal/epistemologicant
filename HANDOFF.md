@@ -8,7 +8,7 @@ until then a crate-private shim in `-core`. `f64`, no exp/ln in combination rule
 Fifth tool: not now.
 
 ## Next (unblocked)
-One PR per day, red-first tests plus sabotage: core+credence 11-19 (worktree `epistemologicant-wt-core-credence`, branch `core-credence`), evidence 11-20, justify 11-21, record 11-22.
+One PR per day, red-first tests plus sabotage: core+credence PR opened 11-18 (second of the bootstrap pair; version 0.0.1), then evidence 11-19, justify 11-20, record 11-21 (one PR per UTC day, counted by day opened).
 SageAnt needs `-evidence` + `-record` by ~11-22; its design note (general capabilities) comes via the PM ~11-20. CI + branch protection before the first code PR.
 
 ## Holds / WAITs
