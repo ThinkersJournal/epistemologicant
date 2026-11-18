@@ -1,0 +1,11 @@
+[package]
+name = "epistemologicant-core"
+description = "Shared types for EpistemologicAnt: re-exports of semanticant-core's Reason, Verdict and Provenance"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+semanticant-core = "0.1.0"
