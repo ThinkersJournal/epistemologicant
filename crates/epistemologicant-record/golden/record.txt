@@ -1,0 +1,160 @@
+now=280 wire physics -> 3fe2549fd24d6f24
+  record.shrunk | "wire" on "physics": 40 observation(s), effective weight 0.33789062499999994, prior 3 at baseline 0.55
+now=280 wire biology -> 3fe05b1a17d9fb29
+  record.shrunk | "wire" on "biology": 40 observation(s), effective weight 0.345703125, prior 3 at baseline 0.55
+now=280 wire science -> 3fe121ca1a75acc9
+  record.shrunk | "wire" on "science": 80 observation(s), effective weight 0.6835937500000001, prior 3 at baseline 0.55
+now=280 wire all -> 3fe121ca1a75acc9
+  record.shrunk | "wire" on "all": 80 observation(s), effective weight 0.6835937500000001, prior 3 at baseline 0.55
+now=280 wire chemistry -> 3fe199999999999a
+  record.baseline-only | no observations of "wire" on "chemistry"; baseline 0.55
+now=280 blog physics -> 3fc82e6c3c62ade3
+  record.shrunk | "blog" on "physics": 40 observation(s), effective weight 5.930957031249999, prior 3 at baseline 0.55
+now=280 blog biology -> 3fe199999999999a
+  record.baseline-only | no observations of "blog" on "biology"; baseline 0.55
+now=280 blog science -> 3fc82e6c3c62ade3
+  record.shrunk | "blog" on "science": 40 observation(s), effective weight 5.930957031249999, prior 3 at baseline 0.55
+now=280 blog all -> 3fc82e6c3c62ade3
+  record.shrunk | "blog" on "all": 40 observation(s), effective weight 5.930957031249999, prior 3 at baseline 0.55
+now=280 blog chemistry -> 3fe199999999999a
+  record.baseline-only | no observations of "blog" on "chemistry"; baseline 0.55
+now=280 lab physics -> 3fe199999999999a
+  record.baseline-only | no observations of "lab" on "physics"; baseline 0.55
+now=280 lab biology -> 3fe19bcc76ce8f60
+  record.shrunk | "lab" on "biology": 1 observation(s), effective weight 0.0017903645833333333, prior 3 at baseline 0.55
+now=280 lab science -> 3fe19bcc76ce8f60
+  record.shrunk | "lab" on "science": 1 observation(s), effective weight 0.0017903645833333333, prior 3 at baseline 0.55
+now=280 lab all -> 3fe19bcc76ce8f60
+  record.shrunk | "lab" on "all": 1 observation(s), effective weight 0.0017903645833333333, prior 3 at baseline 0.55
+now=280 lab chemistry -> 3fe199999999999a
+  record.baseline-only | no observations of "lab" on "chemistry"; baseline 0.55
+now=280 nobody physics -> 3fe199999999999a
+  record.baseline-only | no observations of "nobody" on "physics"; baseline 0.55
+now=280 nobody biology -> 3fe199999999999a
+  record.baseline-only | no observations of "nobody" on "biology"; baseline 0.55
+now=280 nobody science -> 3fe199999999999a
+  record.baseline-only | no observations of "nobody" on "science"; baseline 0.55
+now=280 nobody all -> 3fe199999999999a
+  record.baseline-only | no observations of "nobody" on "all"; baseline 0.55
+now=280 nobody chemistry -> 3fe199999999999a
+  record.baseline-only | no observations of "nobody" on "chemistry"; baseline 0.55
+now=400 wire physics -> 3fe1a683bfbba305
+  record.shrunk | "wire" on "physics": 40 observation(s), effective weight 0.021118164062499997, prior 3 at baseline 0.55
+now=400 wire biology -> 3fe1838f09df65b6
+  record.shrunk | "wire" on "biology": 40 observation(s), effective weight 0.0216064453125, prior 3 at baseline 0.55
+now=400 wire science -> 3fe19088df7913bb
+  record.shrunk | "wire" on "science": 80 observation(s), effective weight 0.04272460937500001, prior 3 at baseline 0.55
+now=400 wire all -> 3fe19088df7913bb
+  record.shrunk | "wire" on "all": 80 observation(s), effective weight 0.04272460937500001, prior 3 at baseline 0.55
+now=400 wire chemistry -> 3fe199999999999a
+  record.baseline-only | no observations of "wire" on "chemistry"; baseline 0.55
+now=400 blog physics -> 3fdf5f83693c29db
+  record.shrunk | "blog" on "physics": 40 observation(s), effective weight 0.37068481445312496, prior 3 at baseline 0.55
+now=400 blog biology -> 3fe199999999999a
+  record.baseline-only | no observations of "blog" on "biology"; baseline 0.55
+now=400 blog science -> 3fdf5f83693c29db
+  record.shrunk | "blog" on "science": 40 observation(s), effective weight 0.37068481445312496, prior 3 at baseline 0.55
+now=400 blog all -> 3fdf5f83693c29db
+  record.shrunk | "blog" on "all": 40 observation(s), effective weight 0.37068481445312496, prior 3 at baseline 0.55
+now=400 blog chemistry -> 3fe199999999999a
+  record.baseline-only | no observations of "blog" on "chemistry"; baseline 0.55
+now=400 lab physics -> 3fe199999999999a
+  record.baseline-only | no observations of "lab" on "physics"; baseline 0.55
+now=400 lab biology -> 3fe199bccc76c23e
+  record.shrunk | "lab" on "biology": 1 observation(s), effective weight 0.00011189778645833333, prior 3 at baseline 0.55
+now=400 lab science -> 3fe199bccc76c23e
+  record.shrunk | "lab" on "science": 1 observation(s), effective weight 0.00011189778645833333, prior 3 at baseline 0.55
+now=400 lab all -> 3fe199bccc76c23e
+  record.shrunk | "lab" on "all": 1 observation(s), effective weight 0.00011189778645833333, prior 3 at baseline 0.55
+now=400 lab chemistry -> 3fe199999999999a
+  record.baseline-only | no observations of "lab" on "chemistry"; baseline 0.55
+now=400 nobody physics -> 3fe199999999999a
+  record.baseline-only | no observations of "nobody" on "physics"; baseline 0.55
+now=400 nobody biology -> 3fe199999999999a
+  record.baseline-only | no observations of "nobody" on "biology"; baseline 0.55
+now=400 nobody science -> 3fe199999999999a
+  record.baseline-only | no observations of "nobody" on "science"; baseline 0.55
+now=400 nobody all -> 3fe199999999999a
+  record.baseline-only | no observations of "nobody" on "all"; baseline 0.55
+now=400 nobody chemistry -> 3fe199999999999a
+  record.baseline-only | no observations of "nobody" on "chemistry"; baseline 0.55
+now=800 wire physics -> 3fe19999ebec1317
+  record.shrunk | "wire" on "physics": 40 observation(s), effective weight 0.0000020377337932586666, prior 3 at baseline 0.55
+now=800 wire biology -> 3fe199990ceef558
+  record.shrunk | "wire" on "biology": 40 observation(s), effective weight 0.0000020861625671386715, prior 3 at baseline 0.55
+now=800 wire science -> 3fe199995f417159
+  record.shrunk | "wire" on "science": 80 observation(s), effective weight 0.000004123896360397338, prior 3 at baseline 0.55
+now=800 wire all -> 3fe199995f417159
+  record.shrunk | "wire" on "all": 80 observation(s), effective weight 0.000004123896360397338, prior 3 at baseline 0.55
+now=800 wire chemistry -> 3fe199999999999a
+  record.baseline-only | no observations of "wire" on "chemistry"; baseline 0.55
+now=800 blog physics -> 3fe1998bf60c65e8
+  record.shrunk | "blog" on "physics": 40 observation(s), effective weight 0.00003588373462359111, prior 3 at baseline 0.55
+now=800 blog biology -> 3fe199999999999a
+  record.baseline-only | no observations of "blog" on "biology"; baseline 0.55
+now=800 blog science -> 3fe1998bf60c65e8
+  record.shrunk | "blog" on "science": 40 observation(s), effective weight 0.00003588373462359111, prior 3 at baseline 0.55
+now=800 blog all -> 3fe1998bf60c65e8
+  record.shrunk | "blog" on "all": 40 observation(s), effective weight 0.00003588373462359111, prior 3 at baseline 0.55
+now=800 blog chemistry -> 3fe199999999999a
+  record.baseline-only | no observations of "blog" on "chemistry"; baseline 0.55
+now=800 lab physics -> 3fe199999999999a
+  record.baseline-only | no observations of "lab" on "physics"; baseline 0.55
+now=800 lab biology -> 3fe199999a800000
+  record.shrunk | "lab" on "biology": 1 observation(s), effective weight 0.000000011175870895385742, prior 3 at baseline 0.55
+now=800 lab science -> 3fe199999a800000
+  record.shrunk | "lab" on "science": 1 observation(s), effective weight 0.000000011175870895385742, prior 3 at baseline 0.55
+now=800 lab all -> 3fe199999a800000
+  record.shrunk | "lab" on "all": 1 observation(s), effective weight 0.000000011175870895385742, prior 3 at baseline 0.55
+now=800 lab chemistry -> 3fe199999999999a
+  record.baseline-only | no observations of "lab" on "chemistry"; baseline 0.55
+now=800 nobody physics -> 3fe199999999999a
+  record.baseline-only | no observations of "nobody" on "physics"; baseline 0.55
+now=800 nobody biology -> 3fe199999999999a
+  record.baseline-only | no observations of "nobody" on "biology"; baseline 0.55
+now=800 nobody science -> 3fe199999999999a
+  record.baseline-only | no observations of "nobody" on "science"; baseline 0.55
+now=800 nobody all -> 3fe199999999999a
+  record.baseline-only | no observations of "nobody" on "all"; baseline 0.55
+now=800 nobody chemistry -> 3fe199999999999a
+  record.baseline-only | no observations of "nobody" on "chemistry"; baseline 0.55
+now=2000 wire physics -> 3fe199999999999a
+  record.shrunk | "wire" on "physics": 40 observation(s), effective weight 0.0000000000000000018533080885924088, prior 3 at baseline 0.55
+now=2000 wire biology -> 3fe199999999999a
+  record.shrunk | "wire" on "biology": 40 observation(s), effective weight 0.0000000000000000018973538018496324, prior 3 at baseline 0.55
+now=2000 wire science -> 3fe199999999999a
+  record.shrunk | "wire" on "science": 80 observation(s), effective weight 0.000000000000000003750661890442041, prior 3 at baseline 0.55
+now=2000 wire all -> 3fe199999999999a
+  record.shrunk | "wire" on "all": 80 observation(s), effective weight 0.000000000000000003750661890442041, prior 3 at baseline 0.55
+now=2000 wire chemistry -> 3fe199999999999a
+  record.baseline-only | no observations of "wire" on "chemistry"; baseline 0.55
+now=2000 blog physics -> 3fe199999999999a
+  record.shrunk | "blog" on "physics": 40 observation(s), effective weight 0.000000000000000032636066519981893, prior 3 at baseline 0.55
+now=2000 blog biology -> 3fe199999999999a
+  record.baseline-only | no observations of "blog" on "biology"; baseline 0.55
+now=2000 blog science -> 3fe199999999999a
+  record.shrunk | "blog" on "science": 40 observation(s), effective weight 0.000000000000000032636066519981893, prior 3 at baseline 0.55
+now=2000 blog all -> 3fe199999999999a
+  record.shrunk | "blog" on "all": 40 observation(s), effective weight 0.000000000000000032636066519981893, prior 3 at baseline 0.55
+now=2000 blog chemistry -> 3fe199999999999a
+  record.baseline-only | no observations of "blog" on "chemistry"; baseline 0.55
+now=2000 lab physics -> 3fe199999999999a
+  record.baseline-only | no observations of "lab" on "physics"; baseline 0.55
+now=2000 lab biology -> 3fe199999999999a
+  record.shrunk | "lab" on "biology": 1 observation(s), effective weight 0.000000000000000000010164395367051604, prior 3 at baseline 0.55
+now=2000 lab science -> 3fe199999999999a
+  record.shrunk | "lab" on "science": 1 observation(s), effective weight 0.000000000000000000010164395367051604, prior 3 at baseline 0.55
+now=2000 lab all -> 3fe199999999999a
+  record.shrunk | "lab" on "all": 1 observation(s), effective weight 0.000000000000000000010164395367051604, prior 3 at baseline 0.55
+now=2000 lab chemistry -> 3fe199999999999a
+  record.baseline-only | no observations of "lab" on "chemistry"; baseline 0.55
+now=2000 nobody physics -> 3fe199999999999a
+  record.baseline-only | no observations of "nobody" on "physics"; baseline 0.55
+now=2000 nobody biology -> 3fe199999999999a
+  record.baseline-only | no observations of "nobody" on "biology"; baseline 0.55
+now=2000 nobody science -> 3fe199999999999a
+  record.baseline-only | no observations of "nobody" on "science"; baseline 0.55
+now=2000 nobody all -> 3fe199999999999a
+  record.baseline-only | no observations of "nobody" on "all"; baseline 0.55
+now=2000 nobody chemistry -> 3fe199999999999a
+  record.baseline-only | no observations of "nobody" on "chemistry"; baseline 0.55

@@ -47,6 +47,17 @@ pub enum EpError {
     UnknownGround(u64),
     /// A ground retracted twice.
     AlreadyRetracted(u64),
+    /// A source-record parameter outside its allowed range (named in the text).
+    BadParam(String),
+    /// An observation dated after `now`.
+    FutureObservation {
+        /// Observation time.
+        at: i64,
+        /// The `now` it was compared with.
+        now: i64,
+    },
+    /// A topic parent link that would make the hierarchy a cycle (named by its `Debug` form).
+    TopicCycle(String),
 }
 
 impl fmt::Display for EpError {
@@ -67,6 +78,11 @@ impl fmt::Display for EpError {
             Self::DuplicateItem(i) => write!(f, "evidence item added twice: {i}"),
             Self::UnknownGround(g) => write!(f, "no such ground: {g}"),
             Self::AlreadyRetracted(g) => write!(f, "ground already retracted: {g}"),
+            Self::BadParam(m) => write!(f, "bad parameter: {m}"),
+            Self::FutureObservation { at, now } => {
+                write!(f, "observation at {at} is after now {now}")
+            }
+            Self::TopicCycle(t) => write!(f, "topic parent link would make a cycle at {t}"),
         }
     }
 }

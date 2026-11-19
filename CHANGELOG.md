@@ -6,6 +6,11 @@ One version number for the whole project. Pre-1.0, the second number is the brea
 - Added `epistemologicant-justify`: `Justifications` (premise and inference grounds, `assert`, `contradict`, `retract` returning the
   exact `Fallout`, `status` with reasons `justify.held.premise|held.inference|contradicted|unsupported`). Support is a least
   fixpoint from the premises, so cycles cannot hold themselves up and a claim with a second ground survives losing one.
+- Added `epistemologicant-record` (same PR, one version): `SourceRecord` / `Params` (baseline, prior strength, half-life, all caller data),
+  `observe`, `set_parent` (topic hierarchy; cycles refused), `reliability(source, topic, now)` returning a `Credence::Point` with
+  reasons `record.baseline-only|record.shrunk`. Shrunk toward the baseline while evidence is thin; recency weight halves at each
+  half-life using only `+ - * /` (no `exp`), so failures fade and a source can recover; a topic pools its sub-topics; a future-dated
+  observation is an error. Golden `golden/record.txt`; six rule mutations each fail tests.
 - CI: advisory `portfolio` job calling CodeRipper's portfolio workflow (same SHA pin as AlarmAnt).
 - `EpError` gained `UnknownGround` and `AlreadyRetracted`.
 - Golden test `golden/justify.txt`; four rule mutations (any-for-all, retired grounds counted, contradiction ignored, fallout
