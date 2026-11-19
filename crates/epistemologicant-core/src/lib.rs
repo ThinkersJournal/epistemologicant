@@ -43,6 +43,10 @@ pub enum EpError {
     UnknownItem(String),
     /// An item id added twice.
     DuplicateItem(String),
+    /// A ground id that was never issued.
+    UnknownGround(u64),
+    /// A ground retracted twice.
+    AlreadyRetracted(u64),
 }
 
 impl fmt::Display for EpError {
@@ -61,6 +65,8 @@ impl fmt::Display for EpError {
             Self::Empty => write!(f, "no inputs"),
             Self::UnknownItem(i) => write!(f, "no such evidence item: {i}"),
             Self::DuplicateItem(i) => write!(f, "evidence item added twice: {i}"),
+            Self::UnknownGround(g) => write!(f, "no such ground: {g}"),
+            Self::AlreadyRetracted(g) => write!(f, "ground already retracted: {g}"),
         }
     }
 }

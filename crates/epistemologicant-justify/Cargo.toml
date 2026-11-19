@@ -1,0 +1,11 @@
+[package]
+name = "epistemologicant-justify"
+description = "Justification tracking: claims with grounds, retraction that reports the exact fallout, status with reasons; cycles and multiple supports handled"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+epistemologicant-core = { version = "0.0.3", path = "../epistemologicant-core" }

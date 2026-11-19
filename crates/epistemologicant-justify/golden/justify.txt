@@ -1,0 +1,84 @@
+== initial
+a -> Held
+  justify.held.premise | "a" held by ground 0 (premise: observation 1)
+b -> Held
+  justify.held.inference | "b" held by ground 1 from ["a"]
+c -> Held
+  justify.held.inference | "c" held by ground 2 from ["b", "d"]
+d -> Held
+  justify.held.premise | "d" held by ground 3 (premise: observation 2)
+e -> Held
+  justify.held.inference | "e" held by ground 5 from ["c"]
+p -> Held
+  justify.held.premise | "p" held by ground 6 (premise: seed)
+q -> Held
+  justify.held.inference | "q" held by ground 7 from ["p"]
+x -> Contradicted
+  justify.contradicted | "x" is supported but contradicts supported ["not-x"]
+not-x -> Contradicted
+  justify.contradicted | "not-x" is supported but contradicts supported ["x"]
+ghost -> Unsupported
+  justify.unsupported | "ghost" was never asserted
+== retract d first support: lost []
+a -> Held
+  justify.held.premise | "a" held by ground 0 (premise: observation 1)
+b -> Held
+  justify.held.inference | "b" held by ground 1 from ["a"]
+c -> Held
+  justify.held.inference | "c" held by ground 2 from ["b", "d"]
+d -> Held
+  justify.held.premise | "d" held by ground 4 (premise: observation 3)
+e -> Held
+  justify.held.inference | "e" held by ground 5 from ["c"]
+p -> Held
+  justify.held.premise | "p" held by ground 6 (premise: seed)
+q -> Held
+  justify.held.inference | "q" held by ground 7 from ["p"]
+x -> Contradicted
+  justify.contradicted | "x" is supported but contradicts supported ["not-x"]
+not-x -> Contradicted
+  justify.contradicted | "not-x" is supported but contradicts supported ["x"]
+ghost -> Unsupported
+  justify.unsupported | "ghost" was never asserted
+== retract p seed: lost ["p", "q"]
+a -> Held
+  justify.held.premise | "a" held by ground 0 (premise: observation 1)
+b -> Held
+  justify.held.inference | "b" held by ground 1 from ["a"]
+c -> Held
+  justify.held.inference | "c" held by ground 2 from ["b", "d"]
+d -> Held
+  justify.held.premise | "d" held by ground 4 (premise: observation 3)
+e -> Held
+  justify.held.inference | "e" held by ground 5 from ["c"]
+p -> Unsupported
+  justify.unsupported | "p" has 1 active ground(s) but none is well-founded (missing or circular support)
+q -> Unsupported
+  justify.unsupported | "q" has 1 active ground(s) but none is well-founded (missing or circular support)
+x -> Contradicted
+  justify.contradicted | "x" is supported but contradicts supported ["not-x"]
+not-x -> Contradicted
+  justify.contradicted | "not-x" is supported but contradicts supported ["x"]
+ghost -> Unsupported
+  justify.unsupported | "ghost" was never asserted
+== retract a: lost ["a", "b", "c", "e"]
+a -> Unsupported
+  justify.unsupported | every ground of "a" was retracted
+b -> Unsupported
+  justify.unsupported | "b" has 1 active ground(s) but none is well-founded (missing or circular support)
+c -> Unsupported
+  justify.unsupported | "c" has 1 active ground(s) but none is well-founded (missing or circular support)
+d -> Held
+  justify.held.premise | "d" held by ground 4 (premise: observation 3)
+e -> Unsupported
+  justify.unsupported | "e" has 1 active ground(s) but none is well-founded (missing or circular support)
+p -> Unsupported
+  justify.unsupported | "p" has 1 active ground(s) but none is well-founded (missing or circular support)
+q -> Unsupported
+  justify.unsupported | "q" has 1 active ground(s) but none is well-founded (missing or circular support)
+x -> Contradicted
+  justify.contradicted | "x" is supported but contradicts supported ["not-x"]
+not-x -> Contradicted
+  justify.contradicted | "not-x" is supported but contradicts supported ["x"]
+ghost -> Unsupported
+  justify.unsupported | "ghost" was never asserted
