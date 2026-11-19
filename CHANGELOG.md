@@ -13,6 +13,7 @@ One version number for the whole project. Pre-1.0, the second number is the brea
   observation is an error. Golden `golden/record.txt`; six rule mutations each fail tests.
 - Fixtures shaped by SageAnt's proposed inputs (SageAnt branch `work/phase1-design` @ f2ff0d6, design note 4.5; a proposal): corroboration cases (a)-(d) plus a control in `-evidence` tests, a shrinkage/long-record case in `-record`; (e)-(h) listed as NOT COVERED in the test file.
 - `-evidence`: `remove_item` (forget one item; dependents stay and the id becomes an opaque origin, so shared-ancestor dependence is never lost but the forgotten source stops counting), `remove_item_and_dependents` (cycle-safe cascade), `dependents_of`. Decided with pm-ants for SageAnt's forget/purge.
+- Added the `epistemologicant` umbrella crate: re-exports `credence`, `evidence`, `justify`, `record` behind same-named features (all default; `evidence` and `record` imply `credence`) and the shared types at the top level. A test checks every tool is reachable and uses one `Verdict`; the no-default-features build is checked, and un-gating a re-export breaks it.
 - Added `ROADMAP.md` (rows incl. the held fifth tool).
 - CI: advisory `portfolio` job calling CodeRipper's portfolio workflow (same SHA pin as AlarmAnt).
 - `EpError` gained `UnknownGround` and `AlreadyRetracted`.

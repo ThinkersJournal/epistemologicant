@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["crates/epistemologicant-core", "crates/epistemologicant-credence", "crates/epistemologicant-evidence", "crates/epistemologicant-justify", "crates/epistemologicant-record"]
+members = ["crates/epistemologicant-core", "crates/epistemologicant-credence", "crates/epistemologicant-evidence", "crates/epistemologicant-justify", "crates/epistemologicant-record", "crates/epistemologicant"]
 
 [workspace.package]
 version = "0.0.3"
