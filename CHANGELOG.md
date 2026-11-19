@@ -11,6 +11,7 @@ One version number for the whole project. Pre-1.0, the second number is the brea
   reasons `record.baseline-only|record.shrunk`. Shrunk toward the baseline while evidence is thin; recency weight halves at each
   half-life using only `+ - * /` (no `exp`), so failures fade and a source can recover; a topic pools its sub-topics; a future-dated
   observation is an error. Golden `golden/record.txt`; six rule mutations each fail tests.
+- Added `ROADMAP.md` (rows incl. the held fifth tool).
 - CI: advisory `portfolio` job calling CodeRipper's portfolio workflow (same SHA pin as AlarmAnt).
 - `EpError` gained `UnknownGround` and `AlreadyRetracted`.
 - Golden test `golden/justify.txt`; four rule mutations (any-for-all, retired grounds counted, contradiction ignored, fallout
