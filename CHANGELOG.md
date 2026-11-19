@@ -11,6 +11,7 @@ One version number for the whole project. Pre-1.0, the second number is the brea
   reasons `record.baseline-only|record.shrunk`. Shrunk toward the baseline while evidence is thin; recency weight halves at each
   half-life using only `+ - * /` (no `exp`), so failures fade and a source can recover; a topic pools its sub-topics; a future-dated
   observation is an error. Golden `golden/record.txt`; six rule mutations each fail tests.
+- Fixtures shaped by SageAnt's proposed inputs (SageAnt branch `work/phase1-design` @ f2ff0d6, design note 4.5; a proposal): corroboration cases (a)-(d) plus a control in `-evidence` tests, a shrinkage/long-record case in `-record`; (e)-(h) listed as NOT COVERED in the test file.
 - Added `ROADMAP.md` (rows incl. the held fifth tool).
 - CI: advisory `portfolio` job calling CodeRipper's portfolio workflow (same SHA pin as AlarmAnt).
 - `EpError` gained `UnknownGround` and `AlreadyRetracted`.

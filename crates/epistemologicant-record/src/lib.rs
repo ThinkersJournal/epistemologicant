@@ -302,6 +302,30 @@ mod tests {
         );
     }
 
+    /// Shape from SageAnt's proposal (SageAnt repo, branch `work/phase1-design` at f2ff0d6, design note 4.5
+    /// item 1; a proposal, not approved defaults): baseline 2 supported + 2 contradicted, shrinkage 4.
+    /// "Supported"/"contradicted" are `true`/`false`; a configured prior is one extra `true`.
+    #[test]
+    fn sageant_proposal_shape_empty_record_is_the_middle_and_a_long_record_beats_a_short_one() {
+        let mut r = SourceRecord::new(Params::new(0.5, 4.0, 100).unwrap());
+        assert_eq!(pt(&r.reliability(&"s", &"t", 0).unwrap()), 0.5);
+        // same 3/4 rate: 3 observations vs 30
+        for i in 0..3 {
+            r.observe("short", "t", i != 0, 0);
+        }
+        for i in 0..40 {
+            r.observe("long", "t", i % 4 != 0, 0);
+        }
+        let (short, long) = (
+            pt(&r.reliability(&"short", &"t", 0).unwrap()),
+            pt(&r.reliability(&"long", &"t", 0).unwrap()),
+        );
+        assert!(short < long && long < 0.75, "short {short}, long {long}");
+        // a configured prior (+1 supported, never earned) lifts an empty record above the middle
+        r.observe("configured", "t", true, 0);
+        assert!(pt(&r.reliability(&"configured", &"t", 0).unwrap()) > 0.5);
+    }
+
     #[test]
     fn estimate_stays_within_unit_interval() {
         let mut r = rec();
