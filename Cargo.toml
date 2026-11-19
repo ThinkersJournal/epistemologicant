@@ -1,9 +1,9 @@
 [workspace]
 resolver = "2"
-members = ["crates/epistemologicant-core", "crates/epistemologicant-credence"]
+members = ["crates/epistemologicant-core", "crates/epistemologicant-credence", "crates/epistemologicant-evidence"]
 
 [workspace.package]
-version = "0.0.1"
+version = "0.0.2"
 edition = "2024"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/ThinkersJournal/epistemologicant"
