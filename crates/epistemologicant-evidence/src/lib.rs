@@ -88,6 +88,45 @@ impl<I: Ord + Clone + Debug, S: Ord + Clone + Debug> EvidenceGraph<I, S> {
         self.items.is_empty()
     }
 
+    /// Items that cite `id` directly, in id order.
+    pub fn dependents_of(&self, id: &I) -> Vec<I> {
+        self.items
+            .iter()
+            .filter(|(_, it)| it.derived_from.contains(id))
+            .map(|(k, _)| k.clone())
+            .collect()
+    }
+
+    /// Forget one item (e.g. a purged claim) and keep everything else. Returns the items that
+    /// cited it directly. **Those items stay, and still name `id` in `derived_from`; `id` is now an
+    /// opaque origin** (like any unrecorded id): two items that both cited it stay dependent on each
+    /// other (never over-counted), but its source no longer counts as appearing in their ancestry.
+    /// `id` may be added again later.
+    pub fn remove_item(&mut self, id: &I) -> Result<Vec<I>, EpError> {
+        self.require(id)?;
+        let dependents = self.dependents_of(id);
+        self.items.remove(id);
+        Ok(dependents)
+    }
+
+    /// Forget an item **and every item that transitively derives from it** (cycle-safe). Returns
+    /// all removed ids, `id` included, in id order. Use when dependents cannot stand without it.
+    pub fn remove_item_and_dependents(&mut self, id: &I) -> Result<Vec<I>, EpError> {
+        self.require(id)?;
+        let mut gone = BTreeSet::new();
+        let mut stack = vec![id.clone()];
+        while let Some(cur) = stack.pop() {
+            if !gone.insert(cur.clone()) {
+                continue;
+            }
+            stack.extend(self.dependents_of(&cur));
+        }
+        for g in &gone {
+            self.items.remove(g);
+        }
+        Ok(gone.into_iter().collect())
+    }
+
     fn require(&self, id: &I) -> Result<(), EpError> {
         if self.items.contains_key(id) {
             Ok(())
@@ -312,6 +351,63 @@ mod tests {
 
     fn rules(v: &Verdict<bool>) -> Vec<&'static str> {
         v.reasons.iter().map(|r| r.rule).collect()
+    }
+
+    #[test]
+    fn remove_item_keeps_dependents_and_turns_it_into_an_opaque_origin() {
+        let mut g = G::new();
+        g.add_item("origin", "s0", &[]).unwrap();
+        g.add_item("a", "s1", &["origin"]).unwrap();
+        g.add_item("b", "s2", &["origin"]).unwrap();
+        assert_eq!(g.remove_item(&"origin").unwrap(), vec!["a", "b"]);
+        assert_eq!(g.len(), 2);
+        assert!(
+            g.independent(&"origin", &"a").is_err(),
+            "removed item is unknown"
+        );
+        // still dependent through the now-opaque origin: never over-counted
+        let v = g.independent(&"a", &"b").unwrap();
+        assert!(!v.value);
+        assert_eq!(rules(&v), ["evidence.dependent.shared-ancestor"]);
+    }
+
+    #[test]
+    fn removed_item_s_source_no_longer_counts_as_shared() {
+        let mut g = G::new();
+        g.add_item("x", "same", &[]).unwrap();
+        g.add_item("y", "same", &[]).unwrap();
+        assert!(!g.independent(&"x", &"y").unwrap().value);
+        g.remove_item(&"x").unwrap();
+        g.add_item("x", "other", &[]).unwrap(); // re-adding is allowed
+        assert!(g.independent(&"x", &"y").unwrap().value);
+    }
+
+    #[test]
+    fn remove_and_dependents_takes_the_whole_downstream_even_through_a_cycle() {
+        let mut g = G::new();
+        g.add_item("root", "s0", &[]).unwrap();
+        g.add_item("m", "s1", &["root"]).unwrap();
+        g.add_item("n", "s2", &["m"]).unwrap();
+        g.add_item("loop-a", "s3", &["n", "loop-b"]).unwrap();
+        g.add_item("loop-b", "s4", &["loop-a"]).unwrap();
+        g.add_item("unrelated", "s5", &[]).unwrap();
+        let gone = g.remove_item_and_dependents(&"root").unwrap();
+        assert_eq!(gone, vec!["loop-a", "loop-b", "m", "n", "root"]);
+        assert_eq!(g.len(), 1);
+        assert!(g.independent(&"unrelated", &"unrelated").is_ok());
+    }
+
+    #[test]
+    fn removing_an_unknown_item_is_an_error() {
+        let mut g = G::new();
+        assert!(matches!(
+            g.remove_item(&"nope"),
+            Err(EpError::UnknownItem(_))
+        ));
+        assert!(matches!(
+            g.remove_item_and_dependents(&"nope"),
+            Err(EpError::UnknownItem(_))
+        ));
     }
 
     #[test]

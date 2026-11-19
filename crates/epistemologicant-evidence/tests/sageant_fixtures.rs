@@ -103,9 +103,8 @@ fn control_two_truly_independent_sources_do_count_twice() {
 // NOT COVERED (4.5 item 3), stated so nobody assumes they are:
 // (e) evidence missing its source or time: `add_item` requires a source, so the type cannot express it; the time is
 //     not an input to the graph at all. The consumer must not call `add_item` without them.
-// (f) evidence from a claim that "no longer exists": the graph has NO removal operation. This is a real gap
-//     (see ROADMAP / the finding sent to pm-ants); until it exists the consumer must rebuild the graph without
-//     the forgotten item.
+// (f) evidence from a claim that "no longer exists": covered by `remove_item` / `remove_item_and_dependents` (unit
+//     tests in src/lib.rs); not repeated here.
 // (g) an imported rating offered as a level: consumer-side; here a rating can only enter as an item with its own source.
-// (h) a contradiction by the claim's own source is a revision, not a contradiction: needs a policy in `-justify`'s
-//     `contradict` (today it marks any two supported claims, same source or not): a gap to settle with SageAnt.
+// (h) same-source contradiction: `-justify`'s `contradict` does not distinguish it; the consumer decides (SageAnt confirmed
+//     it handles this in its mapper, 2026-11-19).
