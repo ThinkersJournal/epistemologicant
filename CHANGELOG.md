@@ -6,6 +6,7 @@ One version number for the whole project. Pre-1.0, the second number is the brea
 - Added `epistemologicant-justify`: `Justifications` (premise and inference grounds, `assert`, `contradict`, `retract` returning the
   exact `Fallout`, `status` with reasons `justify.held.premise|held.inference|contradicted|unsupported`). Support is a least
   fixpoint from the premises, so cycles cannot hold themselves up and a claim with a second ground survives losing one.
+- CI: advisory `portfolio` job calling CodeRipper's portfolio workflow (same SHA pin as AlarmAnt).
 - `EpError` gained `UnknownGround` and `AlreadyRetracted`.
 - Golden test `golden/justify.txt`; four rule mutations (any-for-all, retired grounds counted, contradiction ignored, fallout
   narrowed to the retracted claim) each fail tests.

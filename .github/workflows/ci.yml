@@ -27,3 +27,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: EmbarkStudios/cargo-deny-action@v2
+
+  # Advisory (pm-ants FINDING 2026-11-19): NOT a required check and no rule is silenced here. The called workflow fixes the rule profile and
+  # the CodeRipper version; this repository passes nothing. Pin copied from AlarmAnt's ci.yml.
+  portfolio:
+    permissions:
+      contents: read
+    uses: ciresnave/coderipper/.github/workflows/portfolio.yml@c72a6e03479d914de8ea8a73609ba73e93a0de92 # coderipper main on 2026-11-16 (#356; installs CodeRipper 0.47.5)
