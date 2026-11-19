@@ -1,0 +1,117 @@
+agency-report agency-report -> false
+  evidence.dependent.same-item | "agency-report" named twice: one origin seen twice
+agency-report paper-a -> false
+  evidence.dependent.ancestor | "paper-a" derives from "agency-report"
+  evidence.dependent.shared-source | source "agency" appears in the ancestry of both "agency-report" and "paper-a"
+agency-report paper-b -> false
+  evidence.dependent.ancestor | "paper-b" derives from "agency-report"
+  evidence.dependent.shared-source | source "agency" appears in the ancestry of both "agency-report" and "paper-b"
+agency-report blog -> false
+  evidence.dependent.ancestor | "blog" derives from "agency-report"
+  evidence.dependent.shared-source | source "agency" appears in the ancestry of both "agency-report" and "blog"
+agency-report ring-x -> true
+  evidence.independent | "agency-report" and "ring-x" share no item, ancestor or source
+agency-report ring-y -> true
+  evidence.independent | "agency-report" and "ring-y" share no item, ancestor or source
+agency-report lab -> true
+  evidence.independent | "agency-report" and "lab" share no item, ancestor or source
+agency-report survey -> true
+  evidence.independent | "agency-report" and "survey" share no item, ancestor or source
+agency-report survey-2 -> true
+  evidence.independent | "agency-report" and "survey-2" share no item, ancestor or source
+paper-a paper-a -> false
+  evidence.dependent.same-item | "paper-a" named twice: one origin seen twice
+paper-a paper-b -> false
+  evidence.dependent.shared-ancestor | "paper-a" and "paper-b" both derive from "agency-report"
+  evidence.dependent.shared-source | source "agency" appears in the ancestry of both "paper-a" and "paper-b"
+paper-a blog -> false
+  evidence.dependent.shared-ancestor | "paper-a" and "blog" both derive from "agency-report"
+  evidence.dependent.shared-source | source "agency" appears in the ancestry of both "paper-a" and "blog"
+paper-a ring-x -> true
+  evidence.independent | "paper-a" and "ring-x" share no item, ancestor or source
+paper-a ring-y -> true
+  evidence.independent | "paper-a" and "ring-y" share no item, ancestor or source
+paper-a lab -> true
+  evidence.independent | "paper-a" and "lab" share no item, ancestor or source
+paper-a survey -> true
+  evidence.independent | "paper-a" and "survey" share no item, ancestor or source
+paper-a survey-2 -> true
+  evidence.independent | "paper-a" and "survey-2" share no item, ancestor or source
+paper-b paper-b -> false
+  evidence.dependent.same-item | "paper-b" named twice: one origin seen twice
+paper-b blog -> false
+  evidence.dependent.ancestor | "blog" derives from "paper-b"
+  evidence.dependent.shared-ancestor | "paper-b" and "blog" both derive from "agency-report"
+  evidence.dependent.shared-source | source "agency" appears in the ancestry of both "paper-b" and "blog"
+paper-b ring-x -> true
+  evidence.independent | "paper-b" and "ring-x" share no item, ancestor or source
+paper-b ring-y -> true
+  evidence.independent | "paper-b" and "ring-y" share no item, ancestor or source
+paper-b lab -> true
+  evidence.independent | "paper-b" and "lab" share no item, ancestor or source
+paper-b survey -> true
+  evidence.independent | "paper-b" and "survey" share no item, ancestor or source
+paper-b survey-2 -> true
+  evidence.independent | "paper-b" and "survey-2" share no item, ancestor or source
+blog blog -> false
+  evidence.dependent.same-item | "blog" named twice: one origin seen twice
+blog ring-x -> true
+  evidence.independent | "blog" and "ring-x" share no item, ancestor or source
+blog ring-y -> true
+  evidence.independent | "blog" and "ring-y" share no item, ancestor or source
+blog lab -> true
+  evidence.independent | "blog" and "lab" share no item, ancestor or source
+blog survey -> true
+  evidence.independent | "blog" and "survey" share no item, ancestor or source
+blog survey-2 -> true
+  evidence.independent | "blog" and "survey-2" share no item, ancestor or source
+ring-x ring-x -> false
+  evidence.dependent.same-item | "ring-x" named twice: one origin seen twice
+ring-x ring-y -> false
+  evidence.dependent.mutual-citation | "ring-x" and "ring-y" each derive from the other
+  evidence.dependent.shared-source | source "s-x" appears in the ancestry of both "ring-x" and "ring-y"
+ring-x lab -> true
+  evidence.independent | "ring-x" and "lab" share no item, ancestor or source
+ring-x survey -> true
+  evidence.independent | "ring-x" and "survey" share no item, ancestor or source
+ring-x survey-2 -> true
+  evidence.independent | "ring-x" and "survey-2" share no item, ancestor or source
+ring-y ring-y -> false
+  evidence.dependent.same-item | "ring-y" named twice: one origin seen twice
+ring-y lab -> true
+  evidence.independent | "ring-y" and "lab" share no item, ancestor or source
+ring-y survey -> true
+  evidence.independent | "ring-y" and "survey" share no item, ancestor or source
+ring-y survey-2 -> true
+  evidence.independent | "ring-y" and "survey-2" share no item, ancestor or source
+lab lab -> false
+  evidence.dependent.same-item | "lab" named twice: one origin seen twice
+lab survey -> true
+  evidence.independent | "lab" and "survey" share no item, ancestor or source
+lab survey-2 -> true
+  evidence.independent | "lab" and "survey-2" share no item, ancestor or source
+survey survey -> false
+  evidence.dependent.same-item | "survey" named twice: one origin seen twice
+survey survey-2 -> false
+  evidence.dependent.shared-source | source "survey-1" appears in the ancestry of both "survey" and "survey-2"
+survey-2 survey-2 -> false
+  evidence.dependent.same-item | "survey-2" named twice: one origin seen twice
+clusters [["agency-report", "paper-a", "paper-b", "blog"], ["ring-x", "ring-y"], ["lab"], ["survey", "survey-2"]]
+  evidence.corroborate.merged | evidence.dependent.ancestor: "paper-a" derives from "agency-report"
+  evidence.corroborate.merged | evidence.dependent.shared-source: source "agency" appears in the ancestry of both "agency-report" and "paper-a"
+  evidence.corroborate.merged | evidence.dependent.ancestor: "paper-b" derives from "agency-report"
+  evidence.corroborate.merged | evidence.dependent.shared-source: source "agency" appears in the ancestry of both "agency-report" and "paper-b"
+  evidence.corroborate.merged | evidence.dependent.ancestor: "blog" derives from "agency-report"
+  evidence.corroborate.merged | evidence.dependent.shared-source: source "agency" appears in the ancestry of both "agency-report" and "blog"
+  evidence.corroborate.merged | evidence.dependent.shared-ancestor: "paper-a" and "paper-b" both derive from "agency-report"
+  evidence.corroborate.merged | evidence.dependent.shared-source: source "agency" appears in the ancestry of both "paper-a" and "paper-b"
+  evidence.corroborate.merged | evidence.dependent.shared-ancestor: "paper-a" and "blog" both derive from "agency-report"
+  evidence.corroborate.merged | evidence.dependent.shared-source: source "agency" appears in the ancestry of both "paper-a" and "blog"
+  evidence.corroborate.merged | evidence.dependent.ancestor: "blog" derives from "paper-b"
+  evidence.corroborate.merged | evidence.dependent.shared-ancestor: "paper-b" and "blog" both derive from "agency-report"
+  evidence.corroborate.merged | evidence.dependent.shared-source: source "agency" appears in the ancestry of both "paper-b" and "blog"
+  evidence.corroborate.merged | evidence.dependent.mutual-citation: "ring-x" and "ring-y" each derive from the other
+  evidence.corroborate.merged | evidence.dependent.shared-source: source "s-x" appears in the ancestry of both "ring-x" and "ring-y"
+  evidence.corroborate.merged | evidence.dependent.shared-source: source "survey-1" appears in the ancestry of both "survey" and "survey-2"
+  evidence.corroborate.count | 9 item(s) form 4 independent cluster(s)
+combined interval:3feffe3041bc37ff:3fefffb663d4bbaf

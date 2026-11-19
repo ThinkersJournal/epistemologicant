@@ -39,6 +39,10 @@ pub enum EpError {
     ScoringNeedsPoint,
     /// No inputs.
     Empty,
+    /// An item id that is not in the graph (named by its `Debug` form).
+    UnknownItem(String),
+    /// An item id added twice.
+    DuplicateItem(String),
 }
 
 impl fmt::Display for EpError {
@@ -55,6 +59,8 @@ impl fmt::Display for EpError {
             Self::UnknownValue => write!(f, "credence is unknown"),
             Self::ScoringNeedsPoint => write!(f, "scoring needs a point credence, not an interval"),
             Self::Empty => write!(f, "no inputs"),
+            Self::UnknownItem(i) => write!(f, "no such evidence item: {i}"),
+            Self::DuplicateItem(i) => write!(f, "evidence item added twice: {i}"),
         }
     }
 }
