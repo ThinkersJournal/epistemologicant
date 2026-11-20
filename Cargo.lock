@@ -3,22 +3,48 @@
 version = 4
 
 [[package]]
+name = "epistemologicant"
+version = "0.0.3"
+dependencies = [
+ "epistemologicant-core",
+ "epistemologicant-credence",
+ "epistemologicant-evidence",
+ "epistemologicant-justify",
+ "epistemologicant-record",
+]
+
+[[package]]
 name = "epistemologicant-core"
-version = "0.0.2"
+version = "0.0.3"
 dependencies = [
  "semanticant-core",
 ]
 
 [[package]]
 name = "epistemologicant-credence"
-version = "0.0.2"
+version = "0.0.3"
 dependencies = [
  "epistemologicant-core",
 ]
 
 [[package]]
 name = "epistemologicant-evidence"
-version = "0.0.2"
+version = "0.0.3"
+dependencies = [
+ "epistemologicant-core",
+ "epistemologicant-credence",
+]
+
+[[package]]
+name = "epistemologicant-justify"
+version = "0.0.3"
+dependencies = [
+ "epistemologicant-core",
+]
+
+[[package]]
+name = "epistemologicant-record"
+version = "0.0.3"
 dependencies = [
  "epistemologicant-core",
  "epistemologicant-credence",
