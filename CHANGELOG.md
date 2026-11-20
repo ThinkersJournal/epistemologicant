@@ -11,6 +11,7 @@ One version number for the whole project. Pre-1.0, the second number is the brea
   sources do not leak) and `-evidence` (independence symmetric and irreflexive, same-source items never independent, corroboration
   partitions its input, removal consistent). Ten rule mutations were each caught by a property; four of them were first missed (Brier divisor, mean upper bound,
   retired grounds counted, shared source ignored) and the properties were strengthened until they were caught.
+- `LICENSE-APACHE` (root and all seven crate copies) replaced with the canonical Apache-2.0 text (blob d645695, as in PersistAnt); ours had altered section 6 ("reasonable and customary use" dropped), a reworded section 9 and a filled-in appendix line. Task from pm-ants.
 - Noted by the properties: `Credence::interval(x, x)` stays an `Interval`, while the combinators return a `Point`; bounds are equal.
 
 ## 0.0.3 - 2026-11-20
