@@ -1,0 +1,10 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc 7396133f5f206a13c63dfec30e53cfa04046d96a9e8bf4970900525253864367 # shrinks to p = Params { baseline: 0.3113803793971529, prior_strength: 0.1, half_life: 1 }, n = 1, t1 = 0, dt = 7
+cc 59be551b8a7dcaa2918c8de4913c456390fd1b3d3a06d9b9271fcd1c665bc900 # shrinks to p = Params { baseline: 0.5693782417101423, prior_strength: 5.01078346826958, half_life: 1 }, obs = [], at = 0
+cc 709aa39433fb8f29d362c659fcb8c971b3e0ec9d42e4c63078eb6dcfc4f27637 # shrinks to p = Params { baseline: 0.9478720825897504, prior_strength: 0.1, half_life: 1 }, obs = [(false, 0)]
+cc 645750e5678e9577544e6b847611fc5a0324a1e63237a6d122d92ae052f6bbfb # shrinks to p = Params { baseline: 0.2461386051901209, prior_strength: 0.1, half_life: 157 }, n = 1, t1 = 157, dt = 1

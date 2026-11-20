@@ -15,8 +15,8 @@ justify = ["dep:epistemologicant-justify"]
 record = ["credence", "dep:epistemologicant-record"]
 
 [dependencies]
-epistemologicant-core = { version = "0.0.3", path = "../epistemologicant-core" }
-epistemologicant-credence = { version = "0.0.3", path = "../epistemologicant-credence", optional = true }
-epistemologicant-evidence = { version = "0.0.3", path = "../epistemologicant-evidence", optional = true }
-epistemologicant-justify = { version = "0.0.3", path = "../epistemologicant-justify", optional = true }
-epistemologicant-record = { version = "0.0.3", path = "../epistemologicant-record", optional = true }
+epistemologicant-core = { version = "0.0.4", path = "../epistemologicant-core" }
+epistemologicant-credence = { version = "0.0.4", path = "../epistemologicant-credence", optional = true }
+epistemologicant-evidence = { version = "0.0.4", path = "../epistemologicant-evidence", optional = true }
+epistemologicant-justify = { version = "0.0.4", path = "../epistemologicant-justify", optional = true }
+epistemologicant-record = { version = "0.0.4", path = "../epistemologicant-record", optional = true }

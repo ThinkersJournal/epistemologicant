@@ -2,6 +2,17 @@
 
 One version number for the whole project. Pre-1.0, the second number is the breaking-change number.
 
+## 0.0.4 - 2026-11-21
+- Property tests (`proptest`, dev-dependency only; no library code changed) for the laws each tool promises, in `tests/laws.rs` of
+  `-credence` (noisy-OR bounded, never lowers an input, order-free, unknown adds nothing bit for bit, certainty absorbs; hull exactly
+  commutative and idempotent; mean exact; Brier is the mean of squared errors, bounded, zero only when perfect; level round trip),
+  `-justify` (fallout is exactly the support difference, retraction never adds support, retracting equals never asserting, order of
+  retractions irrelevant, support is well-founded), `-record` (estimate in [0,1], monotone in good/bad outcomes, bad history recovers,
+  sources do not leak) and `-evidence` (independence symmetric and irreflexive, same-source items never independent, corroboration
+  partitions its input, removal consistent). Eleven rule mutations were each caught by a property; two weak properties found by
+  that run were strengthened.
+- Noted by the properties: `Credence::interval(x, x)` stays an `Interval`, while the combinators return a `Point`; bounds are equal.
+
 ## 0.0.3 - 2026-11-20
 - Added `epistemologicant-justify`: `Justifications` (premise and inference grounds, `assert`, `contradict`, `retract` returning the
   exact `Fallout`, `status` with reasons `justify.held.premise|held.inference|contradicted|unsupported`). Support is a least
