@@ -2,7 +2,7 @@
 
 One version number for the whole project. Pre-1.0, the second number is the breaking-change number.
 
-## 0.0.3 - 2026-11-19
+## 0.0.3 - 2026-11-20
 - Added `epistemologicant-justify`: `Justifications` (premise and inference grounds, `assert`, `contradict`, `retract` returning the
   exact `Fallout`, `status` with reasons `justify.held.premise|held.inference|contradicted|unsupported`). Support is a least
   fixpoint from the premises, so cycles cannot hold themselves up and a claim with a second ground survives losing one.
