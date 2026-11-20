@@ -9,8 +9,8 @@ One version number for the whole project. Pre-1.0, the second number is the brea
   `-justify` (fallout is exactly the support difference, retraction never adds support, retracting equals never asserting, order of
   retractions irrelevant, support is well-founded), `-record` (estimate in [0,1], monotone in good/bad outcomes, bad history recovers,
   sources do not leak) and `-evidence` (independence symmetric and irreflexive, same-source items never independent, corroboration
-  partitions its input, removal consistent). Eleven rule mutations were each caught by a property; two weak properties found by
-  that run were strengthened.
+  partitions its input, removal consistent). Ten rule mutations were each caught by a property; four of them were first missed (Brier divisor, mean upper bound,
+  retired grounds counted, shared source ignored) and the properties were strengthened until they were caught.
 - Noted by the properties: `Credence::interval(x, x)` stays an `Interval`, while the combinators return a `Point`; bounds are equal.
 
 ## 0.0.3 - 2026-11-20
