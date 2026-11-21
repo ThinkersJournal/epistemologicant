@@ -29,8 +29,13 @@ proptest! {
     #[test]
     fn two_distinct_items_from_one_source_are_never_independent(s in spec(), a in any::<prop::sample::Index>(), b in any::<prop::sample::Index>()) {
         let g = graph(&s);
-        let (x, y) = (a.index(s.len()), b.index(s.len()));
-        prop_assume!(x != y && s[x].0 == s[y].0);
+        // build the pair from the data instead of rejecting random pairs (rejection can abort the run)
+        let x = a.index(s.len());
+        let peers: Vec<usize> = (0..s.len()).filter(|&i| i != x && s[i].0 == s[x].0).collect();
+        if peers.is_empty() {
+            return Ok(());
+        }
+        let y = peers[b.index(peers.len())];
         prop_assert!(!g.independent(&(x as u8), &(y as u8)).unwrap().value);
     }
 

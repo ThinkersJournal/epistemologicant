@@ -60,7 +60,9 @@ proptest! {
         let (mut j1, ids) = build(&s);
         let (mut j2, _) = build(&s);
         let (x, y) = (ids[a.index(ids.len())], ids[b.index(ids.len())]);
-        prop_assume!(x != y);
+        if x == y {
+            return Ok(());
+        }
         j1.retract(x).unwrap(); j1.retract(y).unwrap();
         j2.retract(y).unwrap(); j2.retract(x).unwrap();
         prop_assert_eq!(j1.supported_claims(), j2.supported_claims());
