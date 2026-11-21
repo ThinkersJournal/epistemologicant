@@ -10,7 +10,7 @@ LICENSE-MIT holder notice checked: "Copyright (c) 2026 Eric Evans" is in LICENSE
 Lesson: proptest `prop_assume!` can abort on CI seeds ("Too many global rejects"); build inputs instead of rejecting; test with PROPTEST_CASES=512 over many runs.
 
 ## Next
-Branch `next` (worktree `..epistemologicant-wt-next`, off a3c9f53): HARDENING approved by pm-ants: rustdoc with doctests that run, examples, one-page SageAnt usage guide; ONE PR on 2026-11-22 UTC. Fifth tool only after the hold is lifted (via pm-ants).
+Branch `next` (hardening DONE and pushed at 0.0.5: doctests, example, docs/USAGE.md, hold re-attribution; only the PR remains) — (worktree `..epistemologicant-wt-next`, off a3c9f53): HARDENING approved by pm-ants: rustdoc with doctests that run, examples, one-page SageAnt usage guide; ONE PR on 2026-11-22 UTC. Fifth tool only after the hold is lifted (via pm-ants).
 
 ## Holds / WAITs
-(no WAITs: pm-ants answered 2026-11-21: hold stays until CireSnave rules, via PM; hardening on `next` approved, one PR 11-22 UTC)
+WAIT: UTC-day gate for the hardening PR | check: gh pr list --repo ThinkersJournal/epistemologicant --state all --json number,createdAt | wake: 2026-11-22T00:05:00Z
