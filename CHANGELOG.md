@@ -12,6 +12,8 @@ One version number for the whole project. Pre-1.0, the second number is the brea
   (never both of a contradictory pair `In`; order independence; In/Out forced by the reasons; equals `-justify` when no defeater exists;
   retraction diff; rank), SageAnt-proposal-shaped fixtures (SageAnt states no defeater requirement). The property test caught a real
   bug (a self-supporting cycle stayed undecided); mutation runs: eight rule mutations; five caught directly, the retired-reason and unreachable-claim rules shield each other (only the combined mutation is caught), and `>` vs `>=` on live rebutters is an equivalent mutant (two equal-rank rebutters are never both live).
+- `docs/PATENT-SWEEP.md`: short "outside as read" patent sweep of the defeater / argument-structure family (5 hits read, none needing review; the other tools are unswept).
+- Stated plainly in README too: higher-rank-wins is this project's design choice, and Pollock 1987 / Dung 1995 were read second hand only.
 - `epistemologicant` umbrella gained the `defeat` feature (default on). `EpError::UnknownReason`.
 - Docs only; no library code changed. Runnable doctests on the front page of every tool crate (run by `cargo test --doc`), a runnable
   example `epistemologicant --example sageant_shape` (SageAnt-proposal-shaped flow, cited to its branch ref), and `docs/USAGE.md`
