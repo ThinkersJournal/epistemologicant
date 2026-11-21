@@ -20,10 +20,14 @@
 //! [`ArgumentationFramework::explain`] says why. Rule ids: `argument.in`, `argument.out`,
 //! `argument.undecided`.
 //!
-//! # Limits
-//! Enumerating complete, preferred and stable extensions is exhaustive (all subsets), so it refuses
-//! more than [`ENUMERATION_LIMIT`] arguments with [`EpError::TooLarge`]. The grounded verdict has no
-//! such limit. *Skeptical* acceptance under a semantics with **no** extension (stable can have none)
+//! # Limits and cost
+//! Enumerating complete, preferred and stable extensions is exhaustive: it visits all `2^n` subsets of
+//! the `n` arguments, each at a cost of roughly `n^2` bit operations (preferred also compares admissible
+//! sets pairwise). At the limit of [`ENUMERATION_LIMIT`] = 20 that is about a million subsets, which takes
+//! a moment in a release build and about two seconds in a debug one (measured); every extra argument doubles it. Above the
+//! limit these calls return `Err(`[`EpError::TooLarge`]`)` immediately, before any work, and never
+//! panic. [`ArgumentationFramework::grounded`] and [`ArgumentationFramework::explain`] have no such
+//! limit (a few passes over the attack list). *Skeptical* acceptance under a semantics with **no** extension (stable can have none)
 //! is vacuously true by definition; the verdict says so (`argument.skeptical.no-extensions`).
 //!
 //! # Credit and what was read
@@ -446,25 +450,81 @@ mod tests {
     }
 
     #[test]
-    fn unknown_arguments_and_oversize_are_errors() {
+    fn unknown_arguments_are_errors() {
         let mut f = af(&["a"], &[]);
         assert!(matches!(
             f.add_attack("a", "ghost"),
             Err(EpError::UnknownItem(_))
         ));
         assert!(matches!(f.explain(&"ghost"), Err(EpError::UnknownItem(_))));
+    }
+
+    /// Run `f` on a worker thread and fail (not hang) if it has not answered within `secs`. A worker that is
+    /// still spinning is abandoned; the test process exits when the harness finishes.
+    fn within<T: Send + 'static>(secs: u64, f: impl FnOnce() -> T + Send + 'static) -> T {
+        let (tx, rx) = std::sync::mpsc::channel();
+        std::thread::spawn(move || {
+            let _ = tx.send(f());
+        });
+        rx.recv_timeout(std::time::Duration::from_secs(secs))
+            .expect("did not answer in time: the size limit must refuse BEFORE enumerating")
+    }
+
+    #[test]
+    fn too_many_arguments_is_a_typed_error_returned_at_once_never_a_panic_or_a_stall() {
+        for n in [ENUMERATION_LIMIT + 1, 31, 32, 100] {
+            for sem in [Semantics::Complete, Semantics::Preferred, Semantics::Stable] {
+                let r = within(5, move || {
+                    let mut big = ArgumentationFramework::<u8>::new();
+                    for i in 0..n as u8 {
+                        big.add_argument(i);
+                    }
+                    big.extensions(sem)
+                });
+                assert_eq!(
+                    r,
+                    Err(EpError::TooLarge {
+                        arguments: n,
+                        limit: ENUMERATION_LIMIT
+                    }),
+                    "{n} arguments, {sem:?}"
+                );
+            }
+        }
+        // credulous and skeptical acceptance go through the same check
+        let r = within(5, || {
+            let mut big = ArgumentationFramework::<u8>::new();
+            for i in 0..25u8 {
+                big.add_argument(i);
+            }
+            big.credulously_accepted(Semantics::Preferred, &0)
+        });
+        assert!(matches!(r, Err(EpError::TooLarge { .. })));
+        // grounded has no limit
         let mut big = ArgumentationFramework::<u8>::new();
-        for i in 0..21 {
+        for i in 0..100u8 {
             big.add_argument(i);
         }
+        assert_eq!(big.grounded().len(), 100);
+    }
+
+    #[test]
+    fn exactly_the_limit_is_allowed() {
+        let mut f = ArgumentationFramework::<u8>::new();
+        for i in 0..ENUMERATION_LIMIT as u8 {
+            f.add_argument(i);
+        }
+        let t = std::time::Instant::now();
+        let ex = within(120, move || f.extensions(Semantics::Stable)).unwrap();
         assert_eq!(
-            big.extensions(Semantics::Preferred),
-            Err(EpError::TooLarge {
-                arguments: 21,
-                limit: 20
-            })
+            ex.len(),
+            1,
+            "no attacks: the only stable extension is everything"
         );
-        assert_eq!(big.grounded().len(), 21, "grounded has no size limit");
+        eprintln!(
+            "enumerating {ENUMERATION_LIMIT} arguments took {:?}",
+            t.elapsed()
+        );
     }
 
     #[test]
