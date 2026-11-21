@@ -8,12 +8,14 @@ Merged #1-#5; `main` = 0.0.4. pm-ants lifted the fifth-tool hold 2026-11-21 (a P
 Reporting: [ASK]/[STATUS]/[FINDING] to pm-ants; [READY] to pm-assist cc pm-ants. No push to a branch under a gate without telling pm-assist.
 
 ## Branch `next` (worktree `..\epistemologicant-wt-next`, off a3c9f53), pushed, NO PR yet
-Hardening (doctests, `--example sageant_shape`, docs/USAGE.md, hold re-attribution) + NEW `epistemologicant-defeat` (defeaters: rebut/undercut, ranks, grounded verdict; golden, property tests incl. cross-check with -justify, SageAnt-shaped fixtures, doctest, umbrella `defeat` feature). All gates clean locally. Open ONE PR on 2026-11-22 UTC or later (first `git fetch`; rebase if main moved).
-Rulings: f64, no exp/ln in rules; Lesson: proptest `prop_assume!` can abort on CI seeds: build inputs, run with PROPTEST_CASES=512+ over many runs.
+Hardening (doctests, `--example sageant_shape`, docs/USAGE.md, hold re-attribution) + `epistemologicant-defeat` + `epistemologicant-argument` (Dung-style; set-oracle + -defeat cross-check; golden; doctest) + umbrella features + docs/PATENT-SWEEP.md (verdicts reworded to `outside as read` per PM, board 480). All gates clean locally. Open ONE PR on 2026-11-22 UTC or later (first `git fetch`; rebase if main moved).
+PR BODY MUST SAY: `-credence`, `-evidence`, `-justify`, `-record` are UNSWEPT (owed before any publish); no publish until CireSnave has read board 480; version is pm-assist's (no lane bump); higher-rank-wins is a design choice; Pollock 1987 and Dung 1995 read second hand only.
+Rulings: f64, no exp/ln in rules; no publish (board 480). Lesson: proptest `prop_assume!` can abort on CI seeds: build inputs, run with PROPTEST_CASES=512+ over many runs. Windows: a stopped mutation run can leave a test .exe running and lock the linker (LNK1104): kill it (Get-Process epistemologicant_*).
 
 ## Next
-1. 11-22 UTC: open the PR, [READY] to pm-assist cc pm-ants (say the version is pm-assist's to allocate), watch CI.
-2. After merge: argument structure (Dung-style grounded/preferred over an attack relation) as the next row, [STATUS] to pm-ants at row start. Read Dung 1995 if reachable; credit it either way.
+1. 11-22 UTC: open the PR (body per above), [READY] to pm-assist cc pm-ants, watch CI.
+2. Dated row (owed before any publish): patent sweep of credence, evidence, justify, record (process: C:\Projects\PATENT-SWEEP-PROCESS.md; template: docs/PATENT-SWEEP.md here; tools/patent-claims.py), [FINDING] to pm-ants with the path.
+3. Belief revision stays unscheduled; no row without a consumer.
 
 ## Holds / WAITs
 WAIT: UTC-day gate for the PR | check: gh pr list --repo ThinkersJournal/epistemologicant --state all --json number,createdAt | wake: 2026-11-22T00:05:00Z

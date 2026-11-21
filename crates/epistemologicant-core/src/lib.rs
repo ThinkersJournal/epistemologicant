@@ -60,6 +60,13 @@ pub enum EpError {
     TopicCycle(String),
     /// A reason id that was never issued.
     UnknownReason(u64),
+    /// Too many arguments to enumerate extensions exhaustively.
+    TooLarge {
+        /// Arguments in the framework.
+        arguments: usize,
+        /// The enumeration limit.
+        limit: usize,
+    },
 }
 
 impl fmt::Display for EpError {
@@ -86,6 +93,10 @@ impl fmt::Display for EpError {
             }
             Self::TopicCycle(t) => write!(f, "topic parent link would make a cycle at {t}"),
             Self::UnknownReason(r) => write!(f, "no such reason: {r}"),
+            Self::TooLarge { arguments, limit } => write!(
+                f,
+                "{arguments} arguments is more than the enumeration limit of {limit}"
+            ),
         }
     }
 }

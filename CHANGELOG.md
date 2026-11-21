@@ -14,7 +14,15 @@ One version number for the whole project. Pre-1.0, the second number is the brea
   bug (a self-supporting cycle stayed undecided); mutation runs: eight rule mutations; five caught directly, the retired-reason and unreachable-claim rules shield each other (only the combined mutation is caught), and `>` vs `>=` on live rebutters is an equivalent mutant (two equal-rank rebutters are never both live).
 - `docs/PATENT-SWEEP.md`: short "outside as read" patent sweep of the defeater / argument-structure family (5 hits read, none needing review; the other tools are unswept).
 - Stated plainly in README too: higher-rank-wins is this project's design choice, and Pollock 1987 / Dung 1995 were read second hand only.
-- `epistemologicant` umbrella gained the `defeat` feature (default on). `EpError::UnknownReason`.
+- Added `epistemologicant-argument` (the fifth tool's second half, in pm-ants' order): Dung-style `ArgumentationFramework` with a grounded labelling
+  (least fixpoint, reasons `argument.in|out|undecided`), complete / preferred / stable extensions by exhaustive enumeration (refused above 20
+  arguments with `EpError::TooLarge`), credulous and skeptical acceptance (skeptical under a semantics with no extension is vacuously true and says
+  so). Tested against an independent set-based oracle, against the published four-argument example, and against `-defeat` (an attack as an undercut
+  gives the same grounded verdict). Golden `golden/argument.txt`, doctest. Dung 1995 was NOT read; definitions are second hand (see crate docs).
+  Mutation runs: 6 of 7 caught by named tests; the seventh (enumeration limit removed) makes the oversize test enumerate 2^21 subsets and hang.
+- Patent sweep verdict wording is now `outside as read` (a model reading, not legal advice), per the PM (board 480). `-credence`, `-evidence`,
+  `-justify`, `-record` remain unswept.
+- `epistemologicant` umbrella gained the `defeat` and `argument` features (default on). `EpError::UnknownReason`, `EpError::TooLarge`.
 - Docs only; no library code changed. Runnable doctests on the front page of every tool crate (run by `cargo test --doc`), a runnable
   example `epistemologicant --example sageant_shape` (SageAnt-proposal-shaped flow, cited to its branch ref), and `docs/USAGE.md`
   (one-page guide: which function answers which question, and which decisions are the caller's).

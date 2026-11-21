@@ -8,12 +8,13 @@ repository.workspace = true
 rust-version.workspace = true
 
 [features]
-default = ["credence", "evidence", "justify", "record", "defeat"]
+default = ["credence", "evidence", "justify", "record", "defeat", "argument"]
 credence = ["dep:epistemologicant-credence"]
 evidence = ["credence", "dep:epistemologicant-evidence"]
 justify = ["dep:epistemologicant-justify"]
 record = ["credence", "dep:epistemologicant-record"]
 defeat = ["dep:epistemologicant-defeat"]
+argument = ["dep:epistemologicant-argument"]
 
 [dependencies]
 epistemologicant-core = { version = "0.0.4", path = "../epistemologicant-core" }
@@ -22,3 +23,4 @@ epistemologicant-evidence = { version = "0.0.4", path = "../epistemologicant-evi
 epistemologicant-justify = { version = "0.0.4", path = "../epistemologicant-justify", optional = true }
 epistemologicant-record = { version = "0.0.4", path = "../epistemologicant-record", optional = true }
 epistemologicant-defeat = { version = "0.0.4", path = "../epistemologicant-defeat", optional = true }
+epistemologicant-argument = { version = "0.0.4", path = "../epistemologicant-argument", optional = true }

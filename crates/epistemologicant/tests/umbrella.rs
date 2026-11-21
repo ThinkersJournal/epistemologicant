@@ -1,12 +1,13 @@
 //! The umbrella re-exports the real tools, and the shared types are one type across all of them.
 #![cfg(all(
+    feature = "argument",
     feature = "credence",
     feature = "defeat",
     feature = "evidence",
     feature = "justify",
     feature = "record"
 ))]
-use epistemologicant::{EpError, Verdict, credence, defeat, evidence, justify, record};
+use epistemologicant::{EpError, Verdict, argument, credence, defeat, evidence, justify, record};
 
 #[test]
 fn every_tool_is_reachable_and_shares_one_verdict_type() {
@@ -33,6 +34,11 @@ fn every_tool_is_reachable_and_shares_one_verdict_type() {
     d.assert("x", &[], 1, "obs");
     let standing: Verdict<defeat::Standing> = d.status(&"x");
     assert!(!standing.reasons.is_empty());
+
+    let mut af = argument::ArgumentationFramework::new();
+    af.add_argument("a");
+    let lab: Verdict<argument::Label> = af.explain(&"a").unwrap();
+    assert!(!lab.reasons.is_empty());
 
     assert!(!combined.reasons.is_empty() && !ind.reasons.is_empty());
     assert!(!st.reasons.is_empty() && !rel.reasons.is_empty());

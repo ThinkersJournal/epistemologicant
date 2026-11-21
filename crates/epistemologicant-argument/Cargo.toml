@@ -1,0 +1,15 @@
+[package]
+name = "epistemologicant-argument"
+description = "Abstract argumentation (Dung-style): arguments and an attack relation, with grounded, complete, preferred and stable semantics, credulous and skeptical acceptance, and reasons for the grounded verdict"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+epistemologicant-core = { version = "0.0.4", path = "../epistemologicant-core" }
+
+[dev-dependencies]
+epistemologicant-defeat = { version = "0.0.4", path = "../epistemologicant-defeat" }
+proptest = "1.12.0"
