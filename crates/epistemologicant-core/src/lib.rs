@@ -58,6 +58,8 @@ pub enum EpError {
     },
     /// A topic parent link that would make the hierarchy a cycle (named by its `Debug` form).
     TopicCycle(String),
+    /// A reason id that was never issued.
+    UnknownReason(u64),
 }
 
 impl fmt::Display for EpError {
@@ -83,6 +85,7 @@ impl fmt::Display for EpError {
                 write!(f, "observation at {at} is after now {now}")
             }
             Self::TopicCycle(t) => write!(f, "topic parent link would make a cycle at {t}"),
+            Self::UnknownReason(r) => write!(f, "no such reason: {r}"),
         }
     }
 }

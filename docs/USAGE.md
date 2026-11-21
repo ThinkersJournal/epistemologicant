@@ -5,7 +5,7 @@ integer you pass in. Nothing reads a clock, a network or a file. Every verdict c
 so you can show why. Pre-1.0: the second version number is the breaking-change number.
 
 ```toml
-epistemologicant = "0.0.5"   # all four tools; or default-features = false, features = ["record"]
+epistemologicant = "0.0"   # all four tools; or default-features = false, features = ["record"]
 ```
 
 | You want to know | Use | Returns |
@@ -20,11 +20,13 @@ epistemologicant = "0.0.5"   # all four tools; or default-features = false, feat
 | combined credence without double counting | `EvidenceGraph::combine_corroborated` | strongest per cluster, noisy-OR across clusters |
 | forget a claim | `remove_item` (dependents stay; the id becomes an opaque origin) or `remove_item_and_dependents` | removed/affected ids |
 | what holds up a conclusion; what falls if I withdraw X | `justify::Justifications` (`assert`, `retract` -> `Fallout`, `status`) | `Held` / `Unsupported` / `Contradicted` with the ground |
+| a claim with reasons for and against it, some cut or outranked | `defeat::DefeasibleSystem` (`assert` with a rank, `contradict` = rebut, `undercut` a reason, `status`, `retract`) | `In` / `Out` / `Undecided` with the live or dead reasons; skeptical: equal-rank conflict and defeat cycles stay `Undecided` |
 | how reliable has this source been on this topic | `record::SourceRecord` (`observe`, `reliability`) | a `Point` pulled toward your baseline while evidence is thin; old outcomes fade so a source can recover |
 
 ## Decisions that are yours, not the library's
 - **What counts as a good outcome**, the baseline, how many observations it is worth (`prior_strength`) and the half-life: all `record::Params`.
 - **Level names** and where a claim sits on them.
+- **What a rank means.** `defeat` only compares them: higher beats lower, equal leaves both undecided.
 - **Whether a same-source contradiction is a revision or a conflict.** `justify::Justifications::contradict` marks any two supported
   claims contradictory; it does not look at their sources.
 - **What "no longer exists" means for a purged claim.** Call `remove_item` or `remove_item_and_dependents`; the graph does not guess.

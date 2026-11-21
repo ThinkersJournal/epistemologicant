@@ -4,13 +4,16 @@ Lane for `C:\Projects\epistemologicant`. Read `C:\Projects\CLAUDE.md`, then `doc
 Reporting: [ASK]/[STATUS]/[FINDING] to pm-ants; [READY] to pm-assist cc pm-ants. No push to a branch under a gate without telling pm-assist.
 
 ## State (2026-11-21)
-Merged #1-#5; `main` = 0.0.4 (a3c9f53): core, credence, evidence (+remove_item), justify, record, umbrella `epistemologicant`, property tests, SageAnt-shaped fixtures, canonical LICENSE-APACHE, CI incl. advisory portfolio job. #5 used 11-21 UTC: next PR not before 2026-11-22 UTC. Version lane-carried (workspace + path pins + lock + CHANGELOG).
-Rulings: f64, no exp/ln in rules; fifth tool (defeaters first, then belief revision unscheduled) HELD by a PM ruling "not now" (inherited line in HANDOFF at 894abc7; NOT CireSnave's words, I mis-attributed it and told pm-ants 2026-11-21). Board 479 asks CireSnave anyway; lift only on word via pm-ants.
-LICENSE-MIT holder notice checked: "Copyright (c) 2026 Eric Evans" is in LICENSE-MIT, one blob in all 7 copies. Closed.
-Lesson: proptest `prop_assume!` can abort on CI seeds ("Too many global rejects"); build inputs instead of rejecting; test with PROPTEST_CASES=512 over many runs.
+Merged #1-#5; `main` = 0.0.4. pm-ants lifted the fifth-tool hold 2026-11-21 (a PM sequencing ruling, NOT CireSnave's words; board 479 withdrawn) and TASKed: defeaters first, then argument structure; generic (AnalysAnt is a test case); ONE PR per UTC day; version via pm-assist, NO lane bump (the workspace stays 0.0.4; CHANGELOG has an "Unreleased" heading). Belief revision stays unscheduled.
+Reporting: [ASK]/[STATUS]/[FINDING] to pm-ants; [READY] to pm-assist cc pm-ants. No push to a branch under a gate without telling pm-assist.
+
+## Branch `next` (worktree `..\epistemologicant-wt-next`, off a3c9f53), pushed, NO PR yet
+Hardening (doctests, `--example sageant_shape`, docs/USAGE.md, hold re-attribution) + NEW `epistemologicant-defeat` (defeaters: rebut/undercut, ranks, grounded verdict; golden, property tests incl. cross-check with -justify, SageAnt-shaped fixtures, doctest, umbrella `defeat` feature). All gates clean locally. Open ONE PR on 2026-11-22 UTC or later (first `git fetch`; rebase if main moved).
+Rulings: f64, no exp/ln in rules; Lesson: proptest `prop_assume!` can abort on CI seeds: build inputs, run with PROPTEST_CASES=512+ over many runs.
 
 ## Next
-Branch `next` (hardening DONE and pushed at 0.0.5: doctests, example, docs/USAGE.md, hold re-attribution; only the PR remains) — (worktree `..epistemologicant-wt-next`, off a3c9f53): HARDENING approved by pm-ants: rustdoc with doctests that run, examples, one-page SageAnt usage guide; ONE PR on 2026-11-22 UTC. Fifth tool only after the hold is lifted (via pm-ants).
+1. 11-22 UTC: open the PR, [READY] to pm-assist cc pm-ants (say the version is pm-assist's to allocate), watch CI.
+2. After merge: argument structure (Dung-style grounded/preferred over an attack relation) as the next row, [STATUS] to pm-ants at row start. Read Dung 1995 if reachable; credit it either way.
 
 ## Holds / WAITs
-WAIT: UTC-day gate for the hardening PR | check: gh pr list --repo ThinkersJournal/epistemologicant --state all --json number,createdAt | wake: 2026-11-22T00:05:00Z
+WAIT: UTC-day gate for the PR | check: gh pr list --repo ThinkersJournal/epistemologicant --state all --json number,createdAt | wake: 2026-11-22T00:05:00Z
