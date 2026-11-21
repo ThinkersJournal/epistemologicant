@@ -2,6 +2,12 @@
 
 One version number for the whole project. Pre-1.0, the second number is the breaking-change number.
 
+## 0.0.5 - 2026-11-22
+- Docs only; no library code changed. Runnable doctests on the front page of every tool crate (run by `cargo test --doc`), a runnable
+  example `epistemologicant --example sageant_shape` (SageAnt-proposal-shaped flow, cited to its branch ref), and `docs/USAGE.md`
+  (one-page guide: which function answers which question, and which decisions are the caller's).
+- ROADMAP/HANDOFF: the fifth-tool hold is a PM ruling relayed in HANDOFF, not CireSnave's words (earlier text mis-attributed it).
+
 ## 0.0.4 - 2026-11-21
 - Property tests (`proptest`, dev-dependency only; no library code changed) for the laws each tool promises, in `tests/laws.rs` of
   `-credence` (noisy-OR bounded, never lowers an input, order-free, unknown adds nothing bit for bit, certainty absorbs; hull exactly

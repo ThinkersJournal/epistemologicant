@@ -1,14 +1,16 @@
-# HANDOFF: epistemologicant (updated 2026-11-20)
+# HANDOFF: epistemologicant (updated 2026-11-21)
 
 Lane for `C:\Projects\epistemologicant`. Read `C:\Projects\CLAUDE.md`, then `docs/SPEC-STEP1.md`, `ROADMAP.md`. Sonnet only. Primary stays on `main`; work in worktrees (`..\epistemologicant-wt-<topic>`).
-Reporting: [ASK]/[STATUS]/[FINDING] to pm-ants; [READY] to pm-assist cc pm-ants.
+Reporting: [ASK]/[STATUS]/[FINDING] to pm-ants; [READY] to pm-assist cc pm-ants. No push to a branch under a gate without telling pm-assist.
 
-## State (2026-11-20)
-Merged: #1 spec, #2 core+credence 0.0.1, #3 evidence 0.0.2, #4 justify+record+umbrella+remove_item+CI portfolio 0.0.3 (opened 11-20 UTC, merged 00:15Z). `main` = 0.0.3.
-Rulings: depend on `semanticant-core = "0.1.0"`; f64, no exp/ln in rules; one PR per UTC day by day opened (#4 used 11-20: next PR not before 2026-11-21 UTC); version lane-carried (workspace + path pins + lock + CHANGELOG). Fifth tool (defeaters first) HELD by CireSnave "not now"; pm-ants asks the PM to lift it once the four are done.
+## State (2026-11-21)
+Merged #1-#5; `main` = 0.0.4 (a3c9f53): core, credence, evidence (+remove_item), justify, record, umbrella `epistemologicant`, property tests, SageAnt-shaped fixtures, canonical LICENSE-APACHE, CI incl. advisory portfolio job. #5 used 11-21 UTC: next PR not before 2026-11-22 UTC. Version lane-carried (workspace + path pins + lock + CHANGELOG).
+Rulings: f64, no exp/ln in rules; fifth tool (defeaters first, then belief revision unscheduled) HELD by a PM ruling "not now" (inherited line in HANDOFF at 894abc7; NOT CireSnave's words, I mis-attributed it and told pm-ants 2026-11-21). Board 479 asks CireSnave anyway; lift only on word via pm-ants.
+LICENSE-MIT holder notice checked: "Copyright (c) 2026 Eric Evans" is in LICENSE-MIT, one blob in all 7 copies. Closed.
+Lesson: proptest `prop_assume!` can abort on CI seeds ("Too many global rejects"); build inputs instead of rejecting; test with PROPTEST_CASES=512 over many runs.
 
 ## Next
-Branch `props` (worktree `..\epistemologicant-wt-props`, off 8487374): property tests for combination laws (SPEC-STEP1 sec 7) for the 2026-11-21 day-PR; keep committing there, open ONE PR on 11-21 UTC. Then: ask pm-ants whether the fifth-tool hold can be lifted (the four tools exist).
+Branch `next` (worktree `..epistemologicant-wt-next`, off a3c9f53): HARDENING approved by pm-ants: rustdoc with doctests that run, examples, one-page SageAnt usage guide; ONE PR on 2026-11-22 UTC. Fifth tool only after the hold is lifted (via pm-ants).
 
 ## Holds / WAITs
-WAIT: UTC-day gate for the next PR | check: gh pr list --repo ThinkersJournal/epistemologicant --state all --json number,createdAt | wake: 2026-11-21T00:05:00Z
+(no WAITs: pm-ants answered 2026-11-21: hold stays until CireSnave rules, via PM; hardening on `next` approved, one PR 11-22 UTC)
