@@ -2,6 +2,9 @@
 
 One version number for the whole project. Pre-1.0, the second number is the breaking-change number.
 
+## 0.0.5 - 2026-11-26
+- CI only: portfolio workflow pinned to coderipper 467fd259 (0.48.1). No code change; not breaking. Allocated by pm-assist.
+
 ## 0.0.4 - 2026-11-21
 - Property tests (`proptest`, dev-dependency only; no library code changed) for the laws each tool promises, in `tests/laws.rs` of
   `-credence` (noisy-OR bounded, never lowers an input, order-free, unknown adds nothing bit for bit, certainty absorbs; hull exactly
