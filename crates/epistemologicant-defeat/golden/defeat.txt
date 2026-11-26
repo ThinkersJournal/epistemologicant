@@ -1,0 +1,69 @@
+== initial
+flies -> Out
+  defeat.out | reason 0 (default) (rank 1) is rebutted by live reason 1 (vet report) for "grounded" at rank 5
+grounded -> In
+  defeat.in | "grounded" is in by live reason 1 (vet report), rank 5, from []
+p -> Undecided
+  defeat.undecided | reason 2 (source a) (rank 3) is contested by open reason 3 (source b) for "not-p" at rank 3
+not-p -> Undecided
+  defeat.undecided | reason 3 (source b) (rank 3) is contested by open reason 2 (source a) for "p" at rank 3
+red -> Out
+  defeat.out | reason 5 (looks red) is undercut by "red-light", which is in
+looks-red -> In
+  defeat.in | "looks-red" is in by live reason 4 (perception), rank 1, from []
+red-light -> In
+  defeat.in | "red-light" is in by live reason 6 (lighting report), rank 1, from []
+a -> In
+  defeat.in | "a" is in by live reason 7 (ra), rank 1, from []
+b -> Out
+  defeat.out | reason 8 (rb) is undercut by "c", which is in
+c -> In
+  defeat.in | "c" is in by live reason 9 (rc), rank 1, from []
+ghost -> Out
+  defeat.out.no-reasons | "ghost" was never mentioned
+== retract lighting report: [("red", Out, In), ("red-light", In, Out)]
+flies -> Out
+  defeat.out | reason 0 (default) (rank 1) is rebutted by live reason 1 (vet report) for "grounded" at rank 5
+grounded -> In
+  defeat.in | "grounded" is in by live reason 1 (vet report), rank 5, from []
+p -> Undecided
+  defeat.undecided | reason 2 (source a) (rank 3) is contested by open reason 3 (source b) for "not-p" at rank 3
+not-p -> Undecided
+  defeat.undecided | reason 3 (source b) (rank 3) is contested by open reason 2 (source a) for "p" at rank 3
+red -> In
+  defeat.in | "red" is in by live reason 5 (looks red), rank 1, from ["looks-red"]
+looks-red -> In
+  defeat.in | "looks-red" is in by live reason 4 (perception), rank 1, from []
+red-light -> Out
+  defeat.out | reason 6 (lighting report) was retracted
+a -> In
+  defeat.in | "a" is in by live reason 7 (ra), rank 1, from []
+b -> Out
+  defeat.out | reason 8 (rb) is undercut by "c", which is in
+c -> In
+  defeat.in | "c" is in by live reason 9 (rc), rank 1, from []
+ghost -> Out
+  defeat.out.no-reasons | "ghost" was never mentioned
+== retract rc: [("a", In, Out), ("b", Out, In), ("c", In, Out)]
+flies -> Out
+  defeat.out | reason 0 (default) (rank 1) is rebutted by live reason 1 (vet report) for "grounded" at rank 5
+grounded -> In
+  defeat.in | "grounded" is in by live reason 1 (vet report), rank 5, from []
+p -> Undecided
+  defeat.undecided | reason 2 (source a) (rank 3) is contested by open reason 3 (source b) for "not-p" at rank 3
+not-p -> Undecided
+  defeat.undecided | reason 3 (source b) (rank 3) is contested by open reason 2 (source a) for "p" at rank 3
+red -> In
+  defeat.in | "red" is in by live reason 5 (looks red), rank 1, from ["looks-red"]
+looks-red -> In
+  defeat.in | "looks-red" is in by live reason 4 (perception), rank 1, from []
+red-light -> Out
+  defeat.out | reason 6 (lighting report) was retracted
+a -> Out
+  defeat.out | reason 7 (ra) is undercut by "b", which is in
+b -> In
+  defeat.in | "b" is in by live reason 8 (rb), rank 1, from []
+c -> Out
+  defeat.out | reason 9 (rc) was retracted
+ghost -> Out
+  defeat.out.no-reasons | "ghost" was never mentioned

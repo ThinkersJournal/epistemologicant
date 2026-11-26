@@ -19,6 +19,23 @@
 //! **Topics.** A topic hierarchy is data: [`SourceRecord::set_parent`] links a topic under a
 //! broader one. Reliability on a topic pools its own observations with those of every topic below
 //! it, so a broad topic reflects its sub-topics and a narrow one only itself.
+//!
+//! # Example
+//!
+//! ```
+//! use epistemologicant_record::*;
+//!
+//! // Baseline 50%, worth 4 observations; observations lose half their weight every 100 time units.
+//! let mut r = SourceRecord::new(Params::new(0.5, 4.0, 100)?);
+//! assert_eq!(r.reliability(&"wire", &"physics", 0)?.reasons[0].rule, "record.baseline-only");
+//!
+//! for t in 0..8 {
+//!     r.observe("wire", "physics", true, t); // supported later by an independent source
+//! }
+//! let v = r.reliability(&"wire", &"physics", 8)?;
+//! assert_eq!(v.reasons[0].rule, "record.shrunk");
+//! # Ok::<(), EpError>(())
+//! ```
 #![forbid(unsafe_code)]
 
 use std::collections::{BTreeMap, BTreeSet};

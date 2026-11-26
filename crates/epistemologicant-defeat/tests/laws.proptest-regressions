@@ -1,0 +1,7 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc 16dfc0f9905d81b69766d4b72ab5a63971ef5fd63f81ef8c372c83edb8ba0353 # shrinks to rs = [R { claim: 1, ante: [], rank: 0, cut_by: [] }, R { claim: 6, ante: [6], rank: 0, cut_by: [] }]

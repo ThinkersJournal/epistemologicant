@@ -15,6 +15,27 @@
 //!
 //! Ancestry of an item = itself plus everything reachable through `derived_from`, cycles allowed.
 //! A `derived_from` id with no recorded item is an opaque origin: it still counts for shared ancestry.
+//!
+//! # Example
+//!
+//! ```
+//! use epistemologicant_evidence::*;
+//!
+//! let mut g = EvidenceGraph::new();
+//! g.add_item("agency-report", "agency", &[])?;
+//! g.add_item("paper-a", "paper-1", &["agency-report"])?; // both papers just repeat the report
+//! g.add_item("paper-b", "paper-2", &["agency-report"])?;
+//! g.add_item("survey", "survey-1", &[])?;
+//!
+//! let v = g.independent(&"paper-a", &"paper-b")?;
+//! assert!(!v.value);
+//! assert_eq!(v.reasons[0].rule, "evidence.dependent.shared-ancestor");
+//!
+//! // Three pieces of evidence, but only two independent ones.
+//! let c = g.corroborate(&["paper-a", "paper-b", "survey"])?.value;
+//! assert_eq!(c.independent_count(), 2);
+//! # Ok::<(), EpError>(())
+//! ```
 #![forbid(unsafe_code)]
 
 use std::collections::{BTreeMap, BTreeSet};

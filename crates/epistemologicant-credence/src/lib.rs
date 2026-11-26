@@ -5,6 +5,25 @@
 //! Numeric policy: combination rules use only `+ - * /` and `min`/`max`, which IEEE 754 fixes
 //! bit-for-bit on every platform. [`log_score`] needs `ln`, which depends on the platform's libm, so it
 //! is the one function NOT covered by the byte-identical golden test.
+//!
+//! # Example
+//!
+//! ```
+//! use epistemologicant_credence::*;
+//!
+//! // Two independent 50% pieces of evidence for the same claim: noisy-OR gives 75%, with the rule named.
+//! let v = combine_independent(&[Credence::point(0.5)?, Credence::point(0.5)?])?;
+//! assert_eq!(v.value, Credence::Point(0.75));
+//! assert_eq!(v.reasons[0].rule, "credence.independent.noisy-or");
+//!
+//! // "No evidence" is not "evidence it is false".
+//! assert_ne!(Credence::Unknown, Credence::point(0.0)?);
+//!
+//! // Names for levels are the caller's data; a level is a range, never a point.
+//! let scale = LevelScale::new(vec!["low".into(), "medium".into(), "high".into()])?;
+//! assert_eq!(scale.to_level(&Credence::point(0.9)?)?, 2);
+//! # Ok::<(), EpError>(())
+//! ```
 #![forbid(unsafe_code)]
 
 pub use epistemologicant_core::{EpError, Reason, Verdict};

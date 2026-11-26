@@ -18,6 +18,23 @@
 //!
 //! Credit: the design follows the justification-based truth maintenance of Doyle (1979), restricted
 //! to monotone grounds (no "out" antecedents); well-founded support is the standard device.
+//!
+//! # Example
+//!
+//! ```
+//! use epistemologicant_justify::*;
+//!
+//! let mut j = Justifications::new();
+//! let obs = j.assert("wet-grass", Ground::Premise { label: "saw it".into() });
+//! j.assert("it-rained", Ground::Inference { antecedents: vec!["wet-grass"] });
+//! assert_eq!(j.status(&"it-rained").value, Status::Held);
+//!
+//! // Withdrawing the observation takes the conclusion with it, and says exactly what was lost.
+//! let fallout = j.retract(obs)?;
+//! assert_eq!(fallout.lost, vec!["it-rained", "wet-grass"]);
+//! assert_eq!(j.status(&"it-rained").value, Status::Unsupported);
+//! # Ok::<(), EpError>(())
+//! ```
 #![forbid(unsafe_code)]
 
 use std::collections::{BTreeMap, BTreeSet};

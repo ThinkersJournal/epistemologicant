@@ -107,6 +107,7 @@ version = "0.0.5"
 dependencies = [
  "epistemologicant-core",
  "epistemologicant-credence",
+ "epistemologicant-defeat",
  "epistemologicant-evidence",
  "epistemologicant-justify",
  "epistemologicant-record",
@@ -124,6 +125,15 @@ name = "epistemologicant-credence"
 version = "0.0.5"
 dependencies = [
  "epistemologicant-core",
+ "proptest",
+]
+
+[[package]]
+name = "epistemologicant-defeat"
+version = "0.0.5"
+dependencies = [
+ "epistemologicant-core",
+ "epistemologicant-justify",
  "proptest",
 ]
 
