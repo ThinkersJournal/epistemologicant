@@ -1,0 +1,38 @@
+== published
+a -> In | argument.in | "a" is unattacked
+b -> Out | argument.out | "b" is out: attacked by Some("a"), which is in
+c -> Out | argument.out | "c" is out: attacked by Some("d"), which is in
+d -> In | argument.in | "d" is unattacked
+Grounded: [{"a", "d"}]
+Complete: [{"a", "d"}]
+Preferred: [{"a", "d"}]
+Stable: [{"a", "d"}]
+stable-skeptical(a): true (argument.skeptical)
+== two-cycle
+a -> Undecided | argument.undecided | "a" is undecided: attacker(s) ["b"] are undecided
+b -> Undecided | argument.undecided | "b" is undecided: attacker(s) ["a"] are undecided
+Grounded: [{}]
+Complete: [{}, {"a"}, {"b"}]
+Preferred: [{"a"}, {"b"}]
+Stable: [{"a"}, {"b"}]
+stable-skeptical(a): false (argument.skeptical)
+== odd-cycle
+a -> Undecided | argument.undecided | "a" is undecided: attacker(s) ["c"] are undecided
+b -> Undecided | argument.undecided | "b" is undecided: attacker(s) ["a"] are undecided
+c -> Undecided | argument.undecided | "c" is undecided: attacker(s) ["b"] are undecided
+Grounded: [{}]
+Complete: [{}]
+Preferred: [{}]
+Stable: []
+stable-skeptical(a): true (argument.skeptical.no-extensions)
+== mixed
+a -> Undecided | argument.undecided | "a" is undecided: attacker(s) ["b"] are undecided
+b -> Undecided | argument.undecided | "b" is undecided: attacker(s) ["a"] are undecided
+c -> Out | argument.out | "c" is out: attacked by Some("e"), which is in
+d -> Undecided | argument.undecided | "d" is undecided: attacker(s) ["d"] are undecided
+e -> In | argument.in | "e" is unattacked
+Grounded: [{"e"}]
+Complete: [{"e"}, {"a", "e"}, {"b", "e"}]
+Preferred: [{"a", "e"}, {"b", "e"}]
+Stable: []
+stable-skeptical(a): true (argument.skeptical.no-extensions)

@@ -21,6 +21,7 @@ epistemologicant = "0.0"   # all four tools; or default-features = false, featur
 | forget a claim | `remove_item` (dependents stay; the id becomes an opaque origin) or `remove_item_and_dependents` | removed/affected ids |
 | what holds up a conclusion; what falls if I withdraw X | `justify::Justifications` (`assert`, `retract` -> `Fallout`, `status`) | `Held` / `Unsupported` / `Contradicted` with the ground |
 | a claim with reasons for and against it, some cut or outranked | `defeat::DefeasibleSystem` (`assert` with a rank, `contradict` = rebut, `undercut` a reason, `status`, `retract`) | `In` / `Out` / `Undecided` with the live or dead reasons; skeptical: equal-rank conflict and defeat cycles stay `Undecided` |
+| which arguments survive an attack relation (abstract, no reasons or ranks) | `argument::ArgumentationFramework` (`add_argument`, `add_attack`, `grounded`, `explain`, `extensions(Grounded/Complete/Preferred/Stable)`, `credulously_accepted`, `skeptically_accepted`) | grounded labels with a reason; extensions as sets (exhaustive, so at most 20 arguments) |
 | how reliable has this source been on this topic | `record::SourceRecord` (`observe`, `reliability`) | a `Point` pulled toward your baseline while evidence is thin; old outcomes fade so a source can recover |
 
 ## Decisions that are yours, not the library's

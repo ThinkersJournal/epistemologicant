@@ -12,11 +12,13 @@ Comprehensive tool libraries covering the whole field of epistemology and episte
 | `epistemologicant-justify` | `Justifications`: premise and inference grounds, `retract` returns the exact set that lost support, `status` (`Held`/`Unsupported`/`Contradicted`) with reasons; cycles cannot support themselves, a second ground survives a retraction |
 | `epistemologicant-record` | `SourceRecord`: per-source, per-topic reliability from observed outcomes; shrunk toward a caller-set baseline while evidence is thin; recency weight (half-life, no `exp`) so a source can recover; a topic pools its sub-topics; reasons on every estimate |
 | `epistemologicant-defeat` | `DefeasibleSystem`: reasons with ranks, rebutting defeaters (`contradict`) and undercutting defeaters (`undercut`), a skeptical grounded verdict (`In`/`Out`/`Undecided`) with reasons; equal-rank conflict and defeat cycles stay undecided; `retract` reports the standings that changed |
+| `epistemologicant-argument` | `ArgumentationFramework` (Dung-style): arguments and an attack relation; grounded labelling with a reason per argument; complete, preferred and stable extensions (exhaustive, refused above 20 arguments); credulous and skeptical acceptance; checked against a set-based oracle and against `-defeat` |
 | `epistemologicant` | umbrella: one dependency; re-exports the four tools behind features of the same name; no code of its own |
 
 **Honest limits of `-defeat`.** "A higher rank beats a lower one in a rebuttal" is this project's own design choice, not Pollock's: the
 Stanford Encyclopedia entry read gives no such rule (the nearest idea read is value-based argumentation). Pollock 1987 and Dung 1995 were
-**not** read; their definitions were read second hand (SEP "Defeasible Reasoning", Wikipedia "Argumentation framework").
+**not** read; their definitions were read second hand (SEP "Defeasible Reasoning", Wikipedia "Argumentation framework"). A patent sweep
+of the argument-structure and defeater family is in `docs/PATENT-SWEEP.md` (verdicts are `outside as read`, a model reading, not legal advice); `-credence`, `-evidence`, `-justify` and `-record` have a second-pass sweep in the same file (one query each, claim 1 read; board 480; **no publish until CireSnave has read it**). `-argument` follows Dung (1995), read second hand only.
 
 Start with `docs/USAGE.md` (one page) and `cargo run -p epistemologicant --example sageant_shape`.
 
