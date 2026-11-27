@@ -109,12 +109,22 @@ surfaced" from one query, not "none exists". Q11 surfaced no hit on cycle handli
 | 9 | US10430722B2 | Learning parameters in a feed forward probabilistic graphical model | IBM | Expired - Fee Related | evidence graph with node confidence from parents | claim 1 needs natural-language training scenarios, factors extracted into evidence graphs, learned weights and recursive confidence formulas. We learn nothing and parse no language | outside as read (sole independent claim 1 read; needs training scenarios, evidence-graph construction and learned weights) |
 | 10 | US5276775A | System and method for building knowledge-based applications | Texas Instruments | Expired - Lifetime | truth maintenance of logical dependencies | claim 1 needs a TMS containing both a deductive reasoning system and a constraint satisfaction system over declarative statements. We have neither | outside as read (expired; independent claims 1, 17, 33 read: each needs a TMS containing a deductive reasoning system and a constraint satisfaction system) |
 
-Seen and NOT read (no verdict): US8041632B1 and US20120004949A1 (Bayesian belief network, noisy-OR tables), EP1788461A1, US9342790
-(half-life forecast combination), US7949581B2, US11204929 / US11238351 / US9727642 (IBM evidence corroboration family; US10318870B2 is
-its sibling), US7318808B2, US10740682B2 (read in the first pass).
+Seen-and-not-read list, worked 2026-11-27 (Google Patents page text, every independent claim read; same method and limits as the five hits above):
+
+| patent | assignee; status on page | independent claims read | our difference | verdict |
+|---|---|---|---|---|
+| US8041632B1 | Citibank; Active, exp. 2027-09-13 | 1 | claim 1 needs a Bayesian network of implications over variables with initial distribution hypotheses, probabilistic induction of a cause of a changed value, and a plausibility-of-data-error determination. We build no Bayesian network and diagnose no data errors | outside as read |
+| US20120004949A1 | Citibank; family record shows lapse for non-payment 2025-01-27 | 10, 19, 21, 24 (1-9 cancelled) | each needs a financial-risk-assessment system with a Bayesian network (plus factoids / exposure profile / virtual assistant in 19, 21, 24). We have none | outside as read |
+| EP1788461A1 | Multitel; Expired, 2026-04-21 | 1, 21, 22, 23 | each needs measurement specifications with confidence regions and levels, and a configuration that guarantees a target confidence level for a sensor arrangement. We design no sensor arrangements | outside as read |
+| US7318808B2 | Oxford Univ. Innovation; Expired | 1, 18, 20 | each needs two independent breathing-rate measurement channels with predicted-vs-measured differences setting combination weights (Kalman in 20). We take no measurements | outside as read |
+| US7949581B2 | PatentRatings; Expired (family litigation flagged on page) | 1, 3, 5 | each needs patent forward-citation data fitted by a lognormal ramp and an exponential decay to build a depreciation schedule. Unrelated to our tools | outside as read |
+
+Seen and still NOT read (no verdict; the reader did not reach the claims, or only a tool summary exists): US9342790B1 (IBM/Kyndryl, half-life forecast
+combination), US4918621A (IntelliCorp ATMS graph of worlds), EP0346128A2 (Xerox, parallel propositional reasoning), US11204929B2, US11238351B2
+and US9727642B2 (IBM evidence-aggregation family; US10318870B2 is a sibling, and its independent claims were read above).
 
 ### Limits specific to this pass
-One query per idea; independent claims of the five hits all read (Google Patents text, 2026-11-27), but the "Seen and NOT read" list stays unread; US-only index; no assignee, citation-chain or
+One query per idea; independent claims of the five hits all read (Google Patents text, 2026-11-27), and five of the eleven seen-and-not-read patents are now read too; six stay unread (listed above); US-only index; no assignee, citation-chain or
 classification search. `-credence`'s noisy-OR and interval arithmetic are textbook mathematics; the sweep looked for claims that apply
 them, not for novelty. Watch list additions: no document or attribute-value fact extraction front end; no corpus management that removes a
 source's evidence on a threshold; no learned evidence-graph weights; no entity-matching threshold decision.
