@@ -103,7 +103,7 @@ dependencies = [
 
 [[package]]
 name = "epistemologicant"
-version = "0.0.5"
+version = "0.0.6"
 dependencies = [
  "epistemologicant-core",
  "epistemologicant-credence",
@@ -115,14 +115,14 @@ dependencies = [
 
 [[package]]
 name = "epistemologicant-core"
-version = "0.0.5"
+version = "0.0.6"
 dependencies = [
  "semanticant-core",
 ]
 
 [[package]]
 name = "epistemologicant-credence"
-version = "0.0.5"
+version = "0.0.6"
 dependencies = [
  "epistemologicant-core",
  "proptest",
@@ -130,7 +130,7 @@ dependencies = [
 
 [[package]]
 name = "epistemologicant-defeat"
-version = "0.0.5"
+version = "0.0.6"
 dependencies = [
  "epistemologicant-core",
  "epistemologicant-justify",
@@ -139,7 +139,7 @@ dependencies = [
 
 [[package]]
 name = "epistemologicant-evidence"
-version = "0.0.5"
+version = "0.0.6"
 dependencies = [
  "epistemologicant-core",
  "epistemologicant-credence",
@@ -148,7 +148,7 @@ dependencies = [
 
 [[package]]
 name = "epistemologicant-justify"
-version = "0.0.5"
+version = "0.0.6"
 dependencies = [
  "epistemologicant-core",
  "proptest",
@@ -156,7 +156,7 @@ dependencies = [
 
 [[package]]
 name = "epistemologicant-record"
-version = "0.0.5"
+version = "0.0.6"
 dependencies = [
  "epistemologicant-core",
  "epistemologicant-credence",
