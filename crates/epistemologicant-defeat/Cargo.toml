@@ -1,6 +1,9 @@
 [package]
 name = "epistemologicant-defeat"
 description = "Defeasible reasoning: reasons that support claims, rebutting and undercutting defeaters, strength-ranked conflict, and a skeptical (grounded) verdict with reasons"
+readme = "README.md"
+keywords = ["epistemology","reasoning","uncertainty","evidence","argumentation"]
+categories = ["science","algorithms"]
 version.workspace = true
 edition.workspace = true
 license.workspace = true
@@ -8,8 +11,8 @@ repository.workspace = true
 rust-version.workspace = true
 
 [dependencies]
-epistemologicant-core = { version = "0.0.7", path = "../epistemologicant-core" }
+epistemologicant-core = { version = "0.0.8", path = "../epistemologicant-core" }
 
 [dev-dependencies]
-epistemologicant-justify = { version = "0.0.7", path = "../epistemologicant-justify" }
+epistemologicant-justify = { version = "0.0.8", path = "../epistemologicant-justify" }
 proptest = "1.12.0"

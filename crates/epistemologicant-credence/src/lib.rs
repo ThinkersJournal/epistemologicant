@@ -473,3 +473,7 @@ mod tests {
         assert_eq!(log_score(&[(pt(1.0), true)]).unwrap(), 0.0);
     }
 }
+
+#[cfg(doctest)]
+#[doc = include_str!("../README.md")]
+struct ReadmeDoctests;

@@ -123,3 +123,7 @@ mod tests {
         assert_eq!(v.reasons[0].rule, "t.rule");
     }
 }
+
+#[cfg(doctest)]
+#[doc = include_str!("../README.md")]
+struct ReadmeDoctests;

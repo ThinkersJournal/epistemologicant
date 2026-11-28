@@ -21,3 +21,7 @@ pub use epistemologicant_evidence as evidence;
 pub use epistemologicant_justify as justify;
 #[cfg(feature = "record")]
 pub use epistemologicant_record as record;
+
+#[cfg(doctest)]
+#[doc = include_str!("../README.md")]
+struct ReadmeDoctests;

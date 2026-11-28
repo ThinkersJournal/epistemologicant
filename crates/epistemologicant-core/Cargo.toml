@@ -1,6 +1,9 @@
 [package]
 name = "epistemologicant-core"
 description = "Shared types for EpistemologicAnt: re-exports of semanticant-core's Reason, Verdict and Provenance"
+readme = "README.md"
+keywords = ["epistemology","reasoning","uncertainty","evidence","argumentation"]
+categories = ["science","algorithms"]
 version.workspace = true
 edition.workspace = true
 license.workspace = true

@@ -1,6 +1,9 @@
 [package]
 name = "epistemologicant-evidence"
 description = "Evidence graph: sources, derivation chains, an independence test, and corroboration that never counts the same origin twice"
+readme = "README.md"
+keywords = ["epistemology","reasoning","uncertainty","evidence","argumentation"]
+categories = ["science","algorithms"]
 version.workspace = true
 edition.workspace = true
 license.workspace = true
@@ -8,8 +11,8 @@ repository.workspace = true
 rust-version.workspace = true
 
 [dependencies]
-epistemologicant-core = { version = "0.0.7", path = "../epistemologicant-core" }
-epistemologicant-credence = { version = "0.0.7", path = "../epistemologicant-credence" }
+epistemologicant-core = { version = "0.0.8", path = "../epistemologicant-core" }
+epistemologicant-credence = { version = "0.0.8", path = "../epistemologicant-credence" }
 
 [dev-dependencies]
 proptest = "1.12.0"
