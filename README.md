@@ -18,7 +18,7 @@ Comprehensive tool libraries covering the whole field of epistemology and episte
 **Honest limits of `-defeat`.** "A higher rank beats a lower one in a rebuttal" is this project's own design choice, not Pollock's: the
 Stanford Encyclopedia entry read gives no such rule (the nearest idea read is value-based argumentation). Pollock 1987 and Dung 1995 were
 **not** read; their definitions were read second hand (SEP "Defeasible Reasoning", Wikipedia "Argumentation framework"). A patent sweep
-of the argument-structure and defeater family is in `docs/PATENT-SWEEP.md` (verdicts are `outside as read`, a model reading, not legal advice); `-credence`, `-evidence`, `-justify` and `-record` have a second-pass sweep in the same file (one query each, claim 1 read; board 480; **no publish until CireSnave has read it**). `-argument` follows Dung (1995), read second hand only.
+of the argument-structure and defeater family is in `docs/PATENT-SWEEP.md` (verdicts are `outside as read`, a model reading, not legal advice); `-credence`, `-evidence`, `-justify` and `-record` have a second-pass sweep in the same file (one query each, claim 1 read; board 480; publish hold lifted by CireSnave 2026-11-27, board 522 A, with a watch list in `ROADMAP.md`). `-argument` follows Dung (1995), read second hand only.
 
 Start with `docs/USAGE.md` (one page) and `cargo run -p epistemologicant --example sageant_shape`.
 

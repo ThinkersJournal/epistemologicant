@@ -5,7 +5,7 @@ patents.google.com / patents.justia.com), then the independent claims of the clo
 (Google Patents pages); NOT legal advice; NOT a freedom-to-operate opinion. There is no attorney. Process:
 `C:\Projects\PATENT-SWEEP-PROCESS.md`; format follows redactant's `PATENT-SWEEP.md`.
 
-**Status: first pass COMPLETE for the routes run; no hit read overlaps an independent claim as read, so none is `needs-review`.** Every verdict below, `outside as read`, is a model reading of machine-converted claim text, not legal advice and not a clearance; the PM read this file and filed board 480 (2026-11-21); nothing is published until CireSnave has read it. Routes NOT run: USPTO full-text, Espacenet, WIPO, assignee
+**Status: first pass COMPLETE for the routes run; no hit read overlaps an independent claim as read, so none is `needs-review`.** Every verdict below, `outside as read`, is a model reading of machine-converted claim text, not legal advice and not a clearance; the PM read this file and filed board 480 (2026-11-21); the publish hold was lifted by CireSnave 2026-11-27 (board 522 A) on these limits and the ROADMAP watch list. Routes NOT run: USPTO full-text, Espacenet, WIPO, assignee
 searches, non-US grants. Requested by pm-ants (2026-11-21) as a short "outside as read" sweep before argument-structure code.
 
 **Scope, and what is NOT covered.** This sweep covers only the family now being built or just built: ranked reasons with rebutting
