@@ -11,8 +11,8 @@ repository.workspace = true
 rust-version.workspace = true
 
 [dependencies]
-epistemologicant-core = { version = "0.0.7", path = "../epistemologicant-core" }
+epistemologicant-core = { version = "0.0.8", path = "../epistemologicant-core" }
 
 [dev-dependencies]
-epistemologicant-justify = { version = "0.0.7", path = "../epistemologicant-justify" }
+epistemologicant-justify = { version = "0.0.8", path = "../epistemologicant-justify" }
 proptest = "1.12.0"
