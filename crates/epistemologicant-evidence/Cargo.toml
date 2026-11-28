@@ -1,6 +1,9 @@
 [package]
 name = "epistemologicant-evidence"
 description = "Evidence graph: sources, derivation chains, an independence test, and corroboration that never counts the same origin twice"
+readme = "README.md"
+keywords = ["epistemology","reasoning","uncertainty","evidence","argumentation"]
+categories = ["science","algorithms"]
 version.workspace = true
 edition.workspace = true
 license.workspace = true

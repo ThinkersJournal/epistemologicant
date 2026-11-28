@@ -534,3 +534,7 @@ mod tests {
         assert_eq!(f.extensions(Semantics::Grounded).unwrap(), vec![set(&[])]);
     }
 }
+
+#[cfg(doctest)]
+#[doc = include_str!("../README.md")]
+struct ReadmeDoctests;

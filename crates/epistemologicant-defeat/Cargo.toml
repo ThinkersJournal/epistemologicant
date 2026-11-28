@@ -1,6 +1,9 @@
 [package]
 name = "epistemologicant-defeat"
 description = "Defeasible reasoning: reasons that support claims, rebutting and undercutting defeaters, strength-ranked conflict, and a skeptical (grounded) verdict with reasons"
+readme = "README.md"
+keywords = ["epistemology","reasoning","uncertainty","evidence","argumentation"]
+categories = ["science","algorithms"]
 version.workspace = true
 edition.workspace = true
 license.workspace = true

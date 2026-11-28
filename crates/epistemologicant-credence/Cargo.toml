@@ -1,6 +1,9 @@
 [package]
 name = "epistemologicant-credence"
 description = "Uncertainty values with an honest Unknown, combination rules and scoring rules"
+readme = "README.md"
+keywords = ["epistemology","reasoning","uncertainty","evidence","argumentation"]
+categories = ["science","algorithms"]
 version.workspace = true
 edition.workspace = true
 license.workspace = true

@@ -1,6 +1,9 @@
 [package]
 name = "epistemologicant"
 description = "EpistemologicAnt umbrella: one dependency that re-exports the foundation tool crates (credence, evidence, justify, record) behind features"
+readme = "README.md"
+keywords = ["epistemology","reasoning","uncertainty","evidence","argumentation"]
+categories = ["science","algorithms"]
 version.workspace = true
 edition.workspace = true
 license.workspace = true

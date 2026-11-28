@@ -348,3 +348,7 @@ mod tests {
         assert_eq!(j.status(&"t").value, Status::Held);
     }
 }
+
+#[cfg(doctest)]
+#[doc = include_str!("../README.md")]
+struct ReadmeDoctests;

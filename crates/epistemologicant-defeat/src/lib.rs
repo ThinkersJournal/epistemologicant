@@ -621,3 +621,7 @@ mod tests {
         assert_eq!(s.undercut(ReasonId(3), "x"), Err(EpError::UnknownReason(3)));
     }
 }
+
+#[cfg(doctest)]
+#[doc = include_str!("../README.md")]
+struct ReadmeDoctests;

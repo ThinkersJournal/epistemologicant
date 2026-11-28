@@ -1,6 +1,9 @@
 [package]
 name = "epistemologicant-record"
 description = "Source record: per-source, per-topic reliability from observed outcomes, shrunk toward a baseline while evidence is thin, recency-weighted so a source can recover"
+readme = "README.md"
+keywords = ["epistemology","reasoning","uncertainty","evidence","argumentation"]
+categories = ["science","algorithms"]
 version.workspace = true
 edition.workspace = true
 license.workspace = true

@@ -1,6 +1,9 @@
 [package]
 name = "epistemologicant-argument"
 description = "Abstract argumentation (Dung-style): arguments and an attack relation, with grounded, complete, preferred and stable semantics, credulous and skeptical acceptance, and reasons for the grounded verdict"
+readme = "README.md"
+keywords = ["epistemology","reasoning","uncertainty","evidence","argumentation"]
+categories = ["science","algorithms"]
 version.workspace = true
 edition.workspace = true
 license.workspace = true

@@ -4,6 +4,31 @@ Comprehensive tool libraries covering the whole field of epistemology and episte
 
 **Status: early. Eight crates exist and are tested; nothing is published beyond the 0.0.0 placeholder.** The spec is `docs/SPEC-STEP1.md`.
 
+## Quick start
+
+```toml
+[dependencies]
+epistemologicant = "0.0"
+```
+
+```rust
+use epistemologicant::{credence::*, evidence::EvidenceGraph, EpError};
+
+fn main() -> Result<(), EpError> {
+    let mut g = EvidenceGraph::new();
+    g.add_item("agency-report", "agency", &[])?;
+    g.add_item("paper-a", "paper-1", &["agency-report"])?; // repeats the report
+    g.add_item("survey", "survey-1", &[])?;
+    let c = g.corroborate(&["agency-report", "paper-a", "survey"])?.value;
+    println!("independent pieces of evidence: {}", c.independent_count()); // prints 2, not 3
+    let both = combine_independent(&[Credence::point(0.5)?, Credence::point(0.5)?])?;
+    println!("{:?}", both.value); // Point(0.75)
+    Ok(())
+}
+```
+
+Every verdict is a `Verdict`: `.value` is the answer and `.reasons` says why (a stable `rule` id and a `note`). In `add_item(id, source, cited_ids)` the second argument names who said it and the third the items it derives from. Edition 2024, Rust 1.88 or newer.
+
 | Crate | What is built |
 |---|---|
 | `epistemologicant-core` | `EpError`; re-exports `Reason`, `Verdict`, `Provenance` unchanged from `semanticant-core` 0.1.0 |

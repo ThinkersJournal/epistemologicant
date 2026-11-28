@@ -353,3 +353,7 @@ mod tests {
         }
     }
 }
+
+#[cfg(doctest)]
+#[doc = include_str!("../README.md")]
+struct ReadmeDoctests;

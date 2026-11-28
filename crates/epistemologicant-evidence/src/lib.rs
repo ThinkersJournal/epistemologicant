@@ -624,3 +624,7 @@ mod tests {
         assert!(!g.independent(&1, &2).unwrap().value);
     }
 }
+
+#[cfg(doctest)]
+#[doc = include_str!("../README.md")]
+struct ReadmeDoctests;
