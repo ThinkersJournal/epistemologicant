@@ -17,10 +17,10 @@ defeat = ["dep:epistemologicant-defeat"]
 argument = ["dep:epistemologicant-argument"]
 
 [dependencies]
-epistemologicant-core = { version = "0.0.6", path = "../epistemologicant-core" }
-epistemologicant-credence = { version = "0.0.6", path = "../epistemologicant-credence", optional = true }
-epistemologicant-evidence = { version = "0.0.6", path = "../epistemologicant-evidence", optional = true }
-epistemologicant-justify = { version = "0.0.6", path = "../epistemologicant-justify", optional = true }
-epistemologicant-record = { version = "0.0.6", path = "../epistemologicant-record", optional = true }
-epistemologicant-defeat = { version = "0.0.6", path = "../epistemologicant-defeat", optional = true }
-epistemologicant-argument = { version = "0.0.6", path = "../epistemologicant-argument", optional = true }
+epistemologicant-core = { version = "0.0.7", path = "../epistemologicant-core" }
+epistemologicant-credence = { version = "0.0.7", path = "../epistemologicant-credence", optional = true }
+epistemologicant-evidence = { version = "0.0.7", path = "../epistemologicant-evidence", optional = true }
+epistemologicant-justify = { version = "0.0.7", path = "../epistemologicant-justify", optional = true }
+epistemologicant-record = { version = "0.0.7", path = "../epistemologicant-record", optional = true }
+epistemologicant-defeat = { version = "0.0.7", path = "../epistemologicant-defeat", optional = true }
+epistemologicant-argument = { version = "0.0.7", path = "../epistemologicant-argument", optional = true }
